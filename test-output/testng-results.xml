@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" ignored="0" total="27" passed="25">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="208635" started-at="2017-04-18T15:59:54Z" finished-at="2017-04-18T16:03:23Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="208635" started-at="2017-04-18T15:59:54Z" finished-at="2017-04-18T16:03:23Z">
+      <class name="enhancement.EU_User">
+        <test-method status="PASS" signature="Login()[pri:1, instance:enhancement.EU_User@437da279]" name="Login" duration-ms="19267" started-at="2017-04-18T21:29:54Z" finished-at="2017-04-18T21:30:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="AMUserSearch()[pri:2, instance:enhancement.EU_User@437da279]" name="AMUserSearch" duration-ms="16851" started-at="2017-04-18T21:30:13Z" finished-at="2017-04-18T21:30:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AMUserSearch -->
+        <test-method status="PASS" signature="EUUserDetails()[pri:3, instance:enhancement.EU_User@437da279]" name="EUUserDetails" duration-ms="5205" started-at="2017-04-18T21:30:30Z" finished-at="2017-04-18T21:30:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EUUserDetails -->
+        <test-method status="PASS" signature="EUUserLogin()[pri:4, instance:enhancement.EU_User@437da279]" name="EUUserLogin" duration-ms="6390" started-at="2017-04-18T21:30:35Z" finished-at="2017-04-18T21:30:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EUUserLogin -->
+        <test-method status="PASS" signature="CreateOpportunity()[pri:5, instance:enhancement.EU_User@437da279]" name="CreateOpportunity" duration-ms="8936" started-at="2017-04-18T21:30:42Z" finished-at="2017-04-18T21:30:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateOpportunity -->
+        <test-method status="PASS" signature="CreateNewOpportunity()[pri:6, instance:enhancement.EU_User@437da279]" name="CreateNewOpportunity" duration-ms="3022" started-at="2017-04-18T21:30:51Z" finished-at="2017-04-18T21:30:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNewOpportunity -->
+        <test-method status="PASS" signature="TenantName()[pri:7, instance:enhancement.EU_User@437da279]" name="TenantName" duration-ms="4024" started-at="2017-04-18T21:30:54Z" finished-at="2017-04-18T21:30:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TenantName -->
+        <test-method status="PASS" signature="Units()[pri:8, instance:enhancement.EU_User@437da279]" name="Units" duration-ms="2852" started-at="2017-04-18T21:30:58Z" finished-at="2017-04-18T21:31:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Units -->
+        <test-method status="PASS" signature="Analysis()[pri:9, instance:enhancement.EU_User@437da279]" name="Analysis" duration-ms="5890" started-at="2017-04-18T21:31:01Z" finished-at="2017-04-18T21:31:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Analysis -->
+        <test-method status="PASS" signature="NewAnalysis()[pri:10, instance:enhancement.EU_User@437da279]" name="NewAnalysis" duration-ms="3299" started-at="2017-04-18T21:31:07Z" finished-at="2017-04-18T21:31:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NewAnalysis -->
+        <test-method status="PASS" signature="UnitsAndSetup()[pri:11, instance:enhancement.EU_User@437da279]" name="UnitsAndSetup" duration-ms="6995" started-at="2017-04-18T21:31:10Z" finished-at="2017-04-18T21:31:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UnitsAndSetup -->
+        <test-method status="PASS" signature="Budget()[pri:12, instance:enhancement.EU_User@437da279]" name="Budget" duration-ms="2221" started-at="2017-04-18T21:31:17Z" finished-at="2017-04-18T21:31:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Budget -->
+        <test-method status="PASS" signature="RentsAndIncentive()[pri:13, instance:enhancement.EU_User@437da279]" name="RentsAndIncentive" duration-ms="5638" started-at="2017-04-18T21:31:19Z" finished-at="2017-04-18T21:31:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RentsAndIncentive -->
+        <test-method status="PASS" signature="Guarantees()[pri:14, instance:enhancement.EU_User@437da279]" name="Guarantees" duration-ms="2859" started-at="2017-04-18T21:31:25Z" finished-at="2017-04-18T21:31:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Guarantees -->
+        <test-method status="PASS" signature="SaveAnalysis()[pri:15, instance:enhancement.EU_User@437da279]" name="SaveAnalysis" duration-ms="2219" started-at="2017-04-18T21:31:28Z" finished-at="2017-04-18T21:31:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveAnalysis -->
+        <test-method status="FAIL" signature="LaunchAnalysis()[pri:16, instance:enhancement.EU_User@437da279]" name="LaunchAnalysis" duration-ms="5443" started-at="2017-04-18T21:31:30Z" finished-at="2017-04-18T21:31:35Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: Element <iframe id="iframeLeaseAnalysis" frameborder="0" height="1124px" width="100%" src="/apex/SPA_LeaseAnalysis?opportunityId=0066C000004hKpVQAU" cd_frame_id_="0fe83682effb0c70df4b6fec703ec0ff"></iframe> is not clickable at point (770, 45). Other element would receive the click: <div class="slds-spinner_container" id="pageBlocker" style="position:fixed !important;">...</div>
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 106 milliseconds
+Build info: version: 'unknown', revision: 'b526bd5', time: '2017-03-07 11:11:07 -0800'
+System info: host: 'DELL-PC', ip: '192.168.1.20', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Dell\AppData\Local\Temp\scoped_dir4828_19180}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 104d3b36c59031556b7bce3d6fd129b3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <iframe id="iframeLeaseAnalysis" frameborder="0" height="1124px" width="100%" src="/apex/SPA_LeaseAnalysis?opportunityId=0066C000004hKpVQAU" cd_frame_id_="0fe83682effb0c70df4b6fec703ec0ff"></iframe> is not clickable at point (770, 45). Other element would receive the click: <div class="slds-spinner_container" id="pageBlocker" style="position:fixed !important;">...</div>
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 106 milliseconds
+Build info: version: 'unknown', revision: 'b526bd5', time: '2017-03-07 11:11:07 -0800'
+System info: host: 'DELL-PC', ip: '192.168.1.20', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Dell\AppData\Local\Temp\scoped_dir4828_19180}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 104d3b36c59031556b7bce3d6fd129b3
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at enhancement.EU_User.LaunchAnalysis(EU_User.java:366)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchAnalysis -->
+        <test-method status="FAIL" signature="LaunchApproval()[pri:17, instance:enhancement.EU_User@437da279]" name="LaunchApproval" duration-ms="4999" started-at="2017-04-18T21:31:35Z" finished-at="2017-04-18T21:31:40Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: Element <iframe id="iframeLeaseAnalysis" frameborder="0" height="2144px" width="100%" src="/apex/SPA_LeaseAnalysis?opportunityId=0066C000004hKpVQAU" cd_frame_id_="8b85ffc54a1f954027efaab750d753e3"></iframe> is not clickable at point (774, 45). Other element would receive the click: <div class="slds-spinner_container" id="pageBlocker" style="position:fixed !important;">...</div>
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 58 milliseconds
+Build info: version: 'unknown', revision: 'b526bd5', time: '2017-03-07 11:11:07 -0800'
+System info: host: 'DELL-PC', ip: '192.168.1.20', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Dell\AppData\Local\Temp\scoped_dir4828_19180}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 104d3b36c59031556b7bce3d6fd129b3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <iframe id="iframeLeaseAnalysis" frameborder="0" height="2144px" width="100%" src="/apex/SPA_LeaseAnalysis?opportunityId=0066C000004hKpVQAU" cd_frame_id_="8b85ffc54a1f954027efaab750d753e3"></iframe> is not clickable at point (774, 45). Other element would receive the click: <div class="slds-spinner_container" id="pageBlocker" style="position:fixed !important;">...</div>
+  (Session info: chrome=57.0.2987.133)
+  (Driver info: chromedriver=2.28.455520 (cc17746adff54984afff480136733114c6b3704b),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 58 milliseconds
+Build info: version: 'unknown', revision: 'b526bd5', time: '2017-03-07 11:11:07 -0800'
+System info: host: 'DELL-PC', ip: '192.168.1.20', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455520 (cc17746adff54984afff480136733114c6b3704b), userDataDir=C:\Users\Dell\AppData\Local\Temp\scoped_dir4828_19180}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.133, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 104d3b36c59031556b7bce3d6fd129b3
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at enhancement.EU_User.LaunchApproval(EU_User.java:404)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApproval -->
+        <test-method status="PASS" signature="Approval()[pri:18, instance:enhancement.EU_User@437da279]" name="Approval" duration-ms="3887" started-at="2017-04-18T21:31:40Z" finished-at="2017-04-18T21:31:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Approval -->
+        <test-method status="PASS" signature="CommentForApproval()[pri:19, instance:enhancement.EU_User@437da279]" name="CommentForApproval" duration-ms="11362" started-at="2017-04-18T21:31:44Z" finished-at="2017-04-18T21:31:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CommentForApproval -->
+        <test-method status="PASS" signature="EUUserLogout()[pri:20, instance:enhancement.EU_User@437da279]" name="EUUserLogout" duration-ms="5770" started-at="2017-04-18T21:31:56Z" finished-at="2017-04-18T21:32:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EUUserLogout -->
+        <test-method status="PASS" signature="ThirdLevelSearch()[pri:21, instance:enhancement.EU_User@437da279]" name="ThirdLevelSearch" duration-ms="8187" started-at="2017-04-18T21:32:01Z" finished-at="2017-04-18T21:32:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ThirdLevelSearch -->
+        <test-method status="PASS" signature="ThirdLevelLogin()[pri:22, instance:enhancement.EU_User@437da279]" name="ThirdLevelLogin" duration-ms="23566" started-at="2017-04-18T21:32:09Z" finished-at="2017-04-18T21:32:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ThirdLevelLogin -->
+        <test-method status="PASS" signature="ThirdLevelApproval()[pri:23, instance:enhancement.EU_User@437da279]" name="ThirdLevelApproval" duration-ms="3752" started-at="2017-04-18T21:32:33Z" finished-at="2017-04-18T21:32:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ThirdLevelApproval -->
+        <test-method status="PASS" signature="ThirdLevelClick()[pri:24, instance:enhancement.EU_User@437da279]" name="ThirdLevelClick" duration-ms="8286" started-at="2017-04-18T21:32:37Z" finished-at="2017-04-18T21:32:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ThirdLevelClick -->
+        <test-method status="PASS" signature="ThirdLevelLogout()[pri:25, instance:enhancement.EU_User@437da279]" name="ThirdLevelLogout" duration-ms="8083" started-at="2017-04-18T21:32:45Z" finished-at="2017-04-18T21:32:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ThirdLevelLogout -->
+        <test-method status="PASS" signature="FourthLevelApproval()[pri:26, instance:enhancement.EU_User@437da279]" name="FourthLevelApproval" duration-ms="20043" started-at="2017-04-18T21:32:53Z" finished-at="2017-04-18T21:33:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FourthLevelApproval -->
+        <test-method status="PASS" signature="FourthLevelClick()[pri:27, instance:enhancement.EU_User@437da279]" name="FourthLevelClick" duration-ms="9513" started-at="2017-04-18T21:33:13Z" finished-at="2017-04-18T21:33:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FourthLevelClick -->
+      </class> <!-- enhancement.EU_User -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
