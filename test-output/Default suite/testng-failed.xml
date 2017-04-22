@@ -3,12 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="enhancement.EU_User">
+      <class name="enhancement.LightingAM_User">
         <methods>
-          <include name="LaunchAnalysis"/>
-          <include name="LaunchApproval"/>
+          <include name="UnitsAndSetup"/>
+          <include name="RentsAndIncentive"/>
+          <include name="Budget"/>
+          <include name="UnitsAndSetupClick"/>
+          <include name="BudgetClick"/>
         </methods>
-      </class> <!-- enhancement.EU_User -->
+      </class> <!-- enhancement.LightingAM_User -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
