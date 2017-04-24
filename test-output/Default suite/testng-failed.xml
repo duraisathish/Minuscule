@@ -6,6 +6,7 @@
       <class name="enhancement.LightingAM_User">
         <methods>
           <include name="UnitsAndSetup"/>
+          <include name="Securities"/>
           <include name="RentsAndIncentive"/>
           <include name="Budget"/>
           <include name="UnitsAndSetupClick"/>

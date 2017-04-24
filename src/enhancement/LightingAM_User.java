@@ -43,9 +43,9 @@ public void AMUserSearch()
 			{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
 			
 			WebDriverWait wait3 = new WebDriverWait(driver, 60);
-			wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"335:0;p\"]")));
+			wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"589:0;p\"]")));
 			
-			WebElement search = driver.findElement(By.xpath("//*[@id=\"335:0;p\"]"));
+			WebElement search = driver.findElement(By.xpath("//*[@id=\"589:0;p\"]"));
 			search.sendKeys("Rob Antrobius");
 			
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -75,7 +75,6 @@ public void AMUserDetails()
 @Test(priority=4,enabled=true)
 public void AMUserLogin()
 {
-	
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
 	driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000001NqqAIAS?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));
@@ -84,18 +83,27 @@ public void AMUserLogin()
 	wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"topButtonRow\"]/input[4]")));	
 	
 	WebElement login = driver.findElement(By.xpath("//*[@id=\"topButtonRow\"]/input[4]"));
-	login.click();	
+	login.click();
+	
 	
 }
 
 @Test(priority=5,enabled=true)
-public void CreateOpportunity() {	
-		
+public void Opportunities()
+{
+	try
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+	
 	WebDriverWait wait1 = new WebDriverWait(driver, 30);
 	wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/div/div[2]/nav/ul/li[5]/a/span")));
 	
 	WebElement opportunity = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/div/div[2]/nav/ul/li[5]/a/span"));
 	opportunity.click();
+}
+
+@Test(priority=6,enabled=true)
+public void CreateOpportunity() {			
+	
 
 	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	
@@ -106,7 +114,7 @@ public void CreateOpportunity() {
 	
 }
 
-@Test(priority=6,enabled=true)
+@Test(priority=7,enabled=true)
 public void CreateNewOpportunity() {	
 		
 	try
@@ -144,7 +152,7 @@ public void CreateNewOpportunity() {
 	
 }
 
-@Test(priority=7,enabled=true)
+@Test(priority=8,enabled=true)
 public void TenantName()
 {
 
@@ -166,7 +174,7 @@ public void TenantName()
 }
 
 
-@Test(priority=8,enabled=true)
+@Test(priority=9,enabled=true)
 public void Units()
 {
 	((JavascriptExecutor)driver).executeScript("scroll(0,200)");	
@@ -192,7 +200,7 @@ public void Units()
 	
 }
 
-@Test(priority=9,enabled=true)
+@Test(priority=10,enabled=true)
 public void AddUnits()
 {
 	try	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
@@ -216,7 +224,7 @@ public void AddUnits()
 	save.click();
 }
 
-@Test(priority=10,enabled=true)
+@Test(priority=11,enabled=true)
 public void Analysis() 
 {	
 	try
@@ -242,7 +250,7 @@ public void Analysis()
 }
 
 
-@Test(priority=11,enabled=true)
+@Test(priority=12,enabled=true)
 public void ClickAnalysis() 
 {	
 	try
@@ -267,7 +275,7 @@ public void ClickAnalysis()
 	
 }
 
-@Test(priority=12,enabled=true)
+@Test(priority=13,enabled=true)
 public void NewAnalysis()
 {
 	try
@@ -279,75 +287,90 @@ public void NewAnalysis()
 	
 }
 
-@Test(priority=13,enabled=true)
+@Test(priority=14,enabled=true)
 public void UnitsAndSetup()
 {
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+	
+	for(int i=0; i<=6; i++)
+	{
+	driver.switchTo().frame(i);
 		
 	WebDriverWait wait = new WebDriverWait(driver, 60);
-	wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Next")));
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"SPA_Opportunity\"]/div[3]/div/div/div/div[1]/div/div[3]/div[2]/button[2]")));
 																	
-	WebElement Units = driver.findElement(By.partialLinkText("Next"));
+	WebElement Units = driver.findElement(By.xpath("//*[@id=\"SPA_Opportunity\"]/div[3]/div/div/div/div[1]/div/div[3]/div[2]/button[2]"));
 	Units.click();	
 	
-	
-
+	}
 }
 
-@Test(priority=14,enabled=true)
+@Test(priority=15,enabled=true)
 public void UnitsAndSetupClick()
 {
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-		
+	
+	for(int i=0; i<=6; i++)
+	{
+	driver.switchTo().frame(i);	
+	
 	WebDriverWait wait = new WebDriverWait(driver, 60);
-	wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Next")));
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"SPA_Opportunity\"]/div[3]/div/div/div/div[1]/div/div[3]/div[2]/button[2]")));
 																	
-	WebElement Units = driver.findElement(By.partialLinkText("Next"));
+	WebElement Units = driver.findElement(By.xpath("//*[@id=\"SPA_Opportunity\"]/div[3]/div/div/div/div[1]/div/div[3]/div[2]/button[2]"));
 	Units.click();	
+	
+	}
 	
 }
 
 
 
-@Test(priority=15,enabled=true)
+@Test(priority=16,enabled=true)
 public void Budget()
 {
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-	driver.switchTo().defaultContent();
+	for(int i=0; i<=6; i++)
+	{
+	driver.switchTo().frame(i);	
 	
 	WebDriverWait wait = new WebDriverWait(driver, 30);
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"SPA_Opportunity\"]/div[3]/div/div/div/div[1]/div/div[3]/div[2]/button[2]")));
 	
 	WebElement budget = driver.findElement(By.xpath("//*[@id=\"SPA_Opportunity\"]/div[3]/div/div/div/div[1]/div/div[3]/div[2]/button[2]"));
 	budget.click();	
+	}
 		
 }
 
-@Test(priority=16,enabled=true)
+@Test(priority=17,enabled=true)
 public void BudgetClick()
 {
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-	driver.switchTo().defaultContent();
+	for(int i=0; i<=6; i++)
+	{
+	driver.switchTo().frame(i);	
 	
 	WebDriverWait wait = new WebDriverWait(driver, 30);
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"SPA_Opportunity\"]/div[3]/div/div/div/div[1]/div/div[3]/div[2]/button[2]")));
 	
 	WebElement budget = driver.findElement(By.xpath("//*[@id=\"SPA_Opportunity\"]/div[3]/div/div/div/div[1]/div/div[3]/div[2]/button[2]"));
 	budget.click();	
+	}
 		
 }
 
 
-@Test(priority=17,enabled=true)
+@Test(priority=18,enabled=true)
 public void RentsAndIncentive()
 {
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-	/*driver.switchTo().frame(driver.findElement(By.id("iframeLeaseAnalysis")));*/
+	driver.switchTo().frame(driver.findElement(By.id("iframeLeaseAnalysis")));
 	WebElement RentAndIncentive = driver.findElement(By.xpath("//*[@id=\"rentsIncentives\"]/div[1]"));
 	RentAndIncentive.click();	
 	
@@ -374,7 +397,7 @@ public void RentsAndIncentive()
 
 }
 
-@Test(priority=18,enabled=true)
+@Test(priority=19,enabled=true)
 public void Securities()
 {
 	try
