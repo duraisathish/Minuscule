@@ -1,5 +1,4 @@
 package enhancement;
-
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -43,9 +42,9 @@ public void AMUserSearch()
 			{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
 			
 			WebDriverWait wait3 = new WebDriverWait(driver, 60);
-			wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"589:0;p\"]")));
+			wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"335:0;p\"]")));
 			
-			WebElement search = driver.findElement(By.xpath("//*[@id=\"589:0;p\"]"));
+			WebElement search = driver.findElement(By.xpath("//*[@id=\"335:0;p\"]"));
 			search.sendKeys("Rob Antrobius");
 			
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -283,7 +282,7 @@ public void NewAnalysis()
 	driver.switchTo().frame(driver.findElement(By.id("iframeLeaseAnalysis")));	
 	
 	WebElement buttonClick = driver.findElement(By.xpath("//*[@id=\"leaseAnalysisApp\"]/ng-include/div/div/div[1]/div[1]/article/div/button"));
-	buttonClick.click();
+	buttonClick.click();	
 	
 }
 
@@ -292,80 +291,34 @@ public void UnitsAndSetup()
 {
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-	
-	for(int i=0; i<=6; i++)
-	{
-	driver.switchTo().frame(i);
-		
+	driver.switchTo().parentFrame();
 	WebDriverWait wait = new WebDriverWait(driver, 60);
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"SPA_Opportunity\"]/div[3]/div/div/div/div[1]/div/div[3]/div[2]/button[2]")));
 																	
 	WebElement Units = driver.findElement(By.xpath("//*[@id=\"SPA_Opportunity\"]/div[3]/div/div/div/div[1]/div/div[3]/div[2]/button[2]"));
 	Units.click();	
 	
-	}
+	
 }
+
 
 @Test(priority=15,enabled=true)
-public void UnitsAndSetupClick()
-{
-	try
-	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-	
-	for(int i=0; i<=6; i++)
-	{
-	driver.switchTo().frame(i);	
-	
-	WebDriverWait wait = new WebDriverWait(driver, 60);
-	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"SPA_Opportunity\"]/div[3]/div/div/div/div[1]/div/div[3]/div[2]/button[2]")));
-																	
-	WebElement Units = driver.findElement(By.xpath("//*[@id=\"SPA_Opportunity\"]/div[3]/div/div/div/div[1]/div/div[3]/div[2]/button[2]"));
-	Units.click();	
-	
-	}
-	
-}
-
-
-
-@Test(priority=16,enabled=true)
 public void Budget()
 {
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-	for(int i=0; i<=6; i++)
-	{
-	driver.switchTo().frame(i);	
 	
-	WebDriverWait wait = new WebDriverWait(driver, 30);
+		
+	WebDriverWait wait = new WebDriverWait(driver, 60);
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"SPA_Opportunity\"]/div[3]/div/div/div/div[1]/div/div[3]/div[2]/button[2]")));
 	
 	WebElement budget = driver.findElement(By.xpath("//*[@id=\"SPA_Opportunity\"]/div[3]/div/div/div/div[1]/div/div[3]/div[2]/button[2]"));
 	budget.click();	
-	}
+	
 		
 }
 
-@Test(priority=17,enabled=true)
-public void BudgetClick()
-{
-	try
-	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-	for(int i=0; i<=6; i++)
-	{
-	driver.switchTo().frame(i);	
-	
-	WebDriverWait wait = new WebDriverWait(driver, 30);
-	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"SPA_Opportunity\"]/div[3]/div/div/div/div[1]/div/div[3]/div[2]/button[2]")));
-	
-	WebElement budget = driver.findElement(By.xpath("//*[@id=\"SPA_Opportunity\"]/div[3]/div/div/div/div[1]/div/div[3]/div[2]/button[2]"));
-	budget.click();	
-	}
-		
-}
-
-
-@Test(priority=18,enabled=true)
+@Test(priority=16,enabled=true)
 public void RentsAndIncentive()
 {
 	try
@@ -397,7 +350,7 @@ public void RentsAndIncentive()
 
 }
 
-@Test(priority=19,enabled=true)
+@Test(priority=17,enabled=true)
 public void Securities()
 {
 	try
@@ -412,5 +365,149 @@ public void Securities()
 	WebElement comment = driver.findElement(By.xpath("//*[@id=\"leaseAnalysisApp\"]/ng-include/div/div/div[2]/div/ng-include[2]/div/div[2]/ui-view/div/div/div[6]/textarea"));
 	comment.sendKeys("Test");
 }
+
+@Test(priority=18,enabled=true)
+public void SaveAnalysis()
+{
+	((JavascriptExecutor)driver).executeScript("scroll(0,100)");
+	
+	try
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+	
+	WebElement Save = driver.findElement(By.xpath("//*[@id=\"leaseAnalysisApp\"]/ng-include/div/div/div[1]/div[2]/div/button[3]/span"));
+	Save.click();
+	
+}
+
+@Test(priority=19,enabled=true)
+public void LaunchAnalysis()
+{
+	
+	try
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+	
+	WebDriverWait wait4 = new WebDriverWait(driver, 60);
+	wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"scenarioPopup0\"]/button")));
+	
+	WebElement dropdown = driver.findElement(By.xpath("//*[@id=\"scenarioPopup0\"]/button"));
+	dropdown.click();	
+	
+	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+	
+	WebDriverWait wait5 = new WebDriverWait(driver, 60);
+	wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"scenarioPopup0\"]/div/ul/li[4]/a")));
+	
+	WebElement launch = driver.findElement(By.xpath("//*[@id=\"scenarioPopup0\"]/div/ul/li[4]/a"));
+	launch.click();
+	
+}
+
+@Test(priority=20,enabled=true)
+public void LaunchApproval()
+{
+	
+	try
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+	
+	WebDriverWait wait4 = new WebDriverWait(driver, 60);
+	wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"scenarioPopup0\"]/button")));
+	
+	WebElement dropdown = driver.findElement(By.xpath("//*[@id=\"scenarioPopup0\"]/button"));
+	dropdown.click();	
+	
+	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+	
+	WebDriverWait wait5 = new WebDriverWait(driver, 60);
+	wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"scenarioPopup0\"]/div/ul/li[4]/a")));
+	
+	WebElement launch = driver.findElement(By.xpath("//*[@id=\"scenarioPopup0\"]/div/ul/li[4]/a"));
+	launch.click();
+	
+	dropdown.click();
+	
+	launch.click();
+	
+}
+
+@Test(priority=21,enabled=true)
+public void Approval()
+{
+	((JavascriptExecutor)driver).executeScript("scroll(0,100)");
+	try
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+	
+	WebDriverWait wait3 = new WebDriverWait(driver, 60);
+	wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='opportunityApp']/div[1]/div[5]/ul/li")));	
+	
+	List<WebElement> element1 = driver.findElements(By.xpath("//*[@id='opportunityApp']/div[1]/div[5]/ul/li"));
+    for(WebElement elements : element1)
+    {
+    	
+    	WebElement test = elements.findElement(By.tagName("a"));      	
+     
+    	if(test.getText().contains("APPROVAL"))
+    	{
+    		test.click();       
+    	}
+        
+    }
+}
+
+
+@Test(priority=22,enabled=true)
+public void Approvalclick()
+{
+	
+	((JavascriptExecutor)driver).executeScript("scroll(0,100)");
+	try
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+	
+	WebDriverWait wait3 = new WebDriverWait(driver, 60);
+	wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='opportunityApp']/div[1]/div[5]/ul/li")));	
+	
+	List<WebElement> element1 = driver.findElements(By.xpath("//*[@id='opportunityApp']/div[1]/div[5]/ul/li"));
+    for(WebElement elements : element1)
+    {
+    	
+    	WebElement test = elements.findElement(By.tagName("a"));      	
+     
+    	if(test.getText().contains("APPROVAL"))
+    	{
+    		test.click();       
+    	}
+        
+    }
+}
+
+
+@Test(priority=23,enabled=true)
+public void CommentForApproval()
+{
+	try
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+	driver.switchTo().frame(driver.findElement(By.id("iframeApproval")));
+	
+	WebDriverWait wait3 = new WebDriverWait(driver, 60);
+	wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[3]/div[1]/div[4]/textarea")));
+	
+	WebElement comment = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[3]/div[1]/div[4]/textarea"));
+	comment.sendKeys("Test");	
+	
+	WebDriverWait wait4 = new WebDriverWait(driver, 60);
+	wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[3]/div[1]/div[6]/button")));
+		
+	WebElement Submit = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[3]/div[1]/div[6]/button"));
+	Submit.click();	
+	
+	WebDriverWait wait5 = new WebDriverWait(driver, 60);
+	wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[3]/div[1]/div[8]/div/p[1]")));
+	
+	WebElement request = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[3]/div[1]/div[8]/div/p[1]"));
+	request.isDisplayed();	
+	
+}
+
+
+
 
 }
