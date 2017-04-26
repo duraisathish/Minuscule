@@ -31,7 +31,7 @@ public void Login()
 			
 		}
 
-@Test(priority=2,enabled=true)
+@Test(priority=2,enabled=false)
 public void AMUserSearch()
 {
 			driver.switchTo().defaultContent();
@@ -42,9 +42,9 @@ public void AMUserSearch()
 			{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
 			
 			WebDriverWait wait3 = new WebDriverWait(driver, 60);
-			wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"335:0;p\"]")));
+			wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"589:0;p\"]")));
 			
-			WebElement search = driver.findElement(By.xpath("//*[@id=\"335:0;p\"]"));
+			WebElement search = driver.findElement(By.xpath("//*[@id=\"589:0;p\"]"));
 			search.sendKeys("Rob Antrobius");
 			
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -57,7 +57,7 @@ public void AMUserSearch()
 			
  }	
 
-@Test(priority=3,enabled=true)
+@Test(priority=3,enabled=false)
 public void AMUserDetails()
 {
 	try
@@ -71,7 +71,7 @@ public void AMUserDetails()
 	userdetails.click();	
 }
 
-@Test(priority=4,enabled=true)
+@Test(priority=4,enabled=false)
 public void AMUserLogin()
 {
 	try
@@ -82,12 +82,12 @@ public void AMUserLogin()
 	wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"topButtonRow\"]/input[4]")));	
 	
 	WebElement login = driver.findElement(By.xpath("//*[@id=\"topButtonRow\"]/input[4]"));
-	login.click();
+	login.click();       //*[@id="topButtonRow"]/input[4]
 	
 	
 }
 
-@Test(priority=5,enabled=true)
+@Test(priority=5,enabled=false)
 public void Opportunities()
 {
 	try
@@ -100,7 +100,7 @@ public void Opportunities()
 	opportunity.click();
 }
 
-@Test(priority=6,enabled=true)
+@Test(priority=6,enabled=false)
 public void CreateOpportunity() {			
 	
 
@@ -113,7 +113,7 @@ public void CreateOpportunity() {
 	
 }
 
-@Test(priority=7,enabled=true)
+@Test(priority=7,enabled=false)
 public void CreateNewOpportunity() {	
 		
 	try
@@ -151,7 +151,7 @@ public void CreateNewOpportunity() {
 	
 }
 
-@Test(priority=8,enabled=true)
+@Test(priority=8,enabled=false)
 public void TenantName()
 {
 
@@ -173,7 +173,7 @@ public void TenantName()
 }
 
 
-@Test(priority=9,enabled=true)
+@Test(priority=9,enabled=false)
 public void Units()
 {
 	((JavascriptExecutor)driver).executeScript("scroll(0,200)");	
@@ -199,31 +199,9 @@ public void Units()
 	
 }
 
-@Test(priority=10,enabled=true)
-public void AddUnits()
-{
-	try	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-	
-	WebElement add = driver.findElement(By.xpath("//*[@id=\"unitAddButton\"]/span"));
-	add.click();
-	
-	WebElement search = driver.findElement(By.id("addProperty"));
-	search.clear();
-	search.sendKeys("Addi");	
 
-	WebDriverWait wait3 = new WebDriverWait(driver, 30);
-	wait3.until(ExpectedConditions.elementToBeClickable(By.className("slds-lookup__menu")));
-		
-	driver.findElement(By.className("slds-lookup__menu")).click();
-	
-	WebElement select = driver.findElement(By.xpath("//*[@id=\"addUnitFields\"]/div/div[4]/table/tbody/tr/td[1]/div/label/span[1]"));
-	select.click();
-	
-	WebElement save  = driver.findElement(By.xpath("//*[@id=\"addUnitsModal\"]/div/ng-include/div[3]/button[2]/span[2]"));
-	save.click();
-}
 
-@Test(priority=11,enabled=true)
+@Test(priority=10,enabled=false)
 public void Analysis() 
 {	
 	try
@@ -249,7 +227,7 @@ public void Analysis()
 }
 
 
-@Test(priority=12,enabled=true)
+@Test(priority=11,enabled=false)
 public void ClickAnalysis() 
 {	
 	try
@@ -274,7 +252,7 @@ public void ClickAnalysis()
 	
 }
 
-@Test(priority=13,enabled=true)
+@Test(priority=12,enabled=false)
 public void NewAnalysis()
 {
 	try
@@ -286,12 +264,27 @@ public void NewAnalysis()
 	
 }
 
-@Test(priority=14,enabled=true)
+@Test(priority=13,enabled=false)
 public void UnitsAndSetup()
 {
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
 	driver.switchTo().parentFrame();
+	
+	WebDriverWait wait1 = new WebDriverWait(driver, 30);
+	wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"filter\"]")));
+			
+	WebElement search = driver.findElement(By.xpath("//*[@id=\"filter\"]"));
+	search.sendKeys("Addison 4");
+	
+	WebDriverWait wait3 = new WebDriverWait(driver, 30);
+	wait3.until(ExpectedConditions.elementToBeClickable(By.className("tt-suggestions")));
+		
+	driver.findElement(By.className("tt-suggestions")).click();		
+	
+	WebElement select = driver.findElement(By.xpath("//*[@id=\"addUnitFields\"]/div[2]/div[2]/table/tbody/tr[1]/td[1]/div/label/span[1]"));
+	select.click();
+	
 	WebDriverWait wait = new WebDriverWait(driver, 60);
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"SPA_Opportunity\"]/div[3]/div/div/div/div[1]/div/div[3]/div[2]/button[2]")));
 																	
@@ -302,7 +295,7 @@ public void UnitsAndSetup()
 }
 
 
-@Test(priority=15,enabled=true)
+@Test(priority=14,enabled=false)
 public void Budget()
 {
 	try
@@ -318,7 +311,7 @@ public void Budget()
 		
 }
 
-@Test(priority=16,enabled=true)
+@Test(priority=15,enabled=false)
 public void RentsAndIncentive()
 {
 	try
@@ -350,7 +343,7 @@ public void RentsAndIncentive()
 
 }
 
-@Test(priority=17,enabled=true)
+@Test(priority=16,enabled=false)
 public void Securities()
 {
 	try
@@ -366,7 +359,7 @@ public void Securities()
 	comment.sendKeys("Test");
 }
 
-@Test(priority=18,enabled=true)
+@Test(priority=17,enabled=false)
 public void SaveAnalysis()
 {
 	((JavascriptExecutor)driver).executeScript("scroll(0,100)");
@@ -379,7 +372,7 @@ public void SaveAnalysis()
 	
 }
 
-@Test(priority=19,enabled=true)
+@Test(priority=18,enabled=false)
 public void LaunchAnalysis()
 {
 	
@@ -402,7 +395,7 @@ public void LaunchAnalysis()
 	
 }
 
-@Test(priority=20,enabled=true)
+@Test(priority=19,enabled=false)
 public void LaunchApproval()
 {
 	
@@ -429,9 +422,10 @@ public void LaunchApproval()
 	
 }
 
-@Test(priority=21,enabled=true)
+@Test(priority=20,enabled=false)
 public void Approval()
 {
+	driver.switchTo().parentFrame();
 	((JavascriptExecutor)driver).executeScript("scroll(0,100)");
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
@@ -454,7 +448,7 @@ public void Approval()
 }
 
 
-@Test(priority=22,enabled=true)
+@Test(priority=21,enabled=false)
 public void Approvalclick()
 {
 	
@@ -480,7 +474,7 @@ public void Approvalclick()
 }
 
 
-@Test(priority=23,enabled=true)
+@Test(priority=22,enabled=false)
 public void CommentForApproval()
 {
 	try
@@ -500,14 +494,134 @@ public void CommentForApproval()
 	Submit.click();	
 	
 	WebDriverWait wait5 = new WebDriverWait(driver, 60);
-	wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[3]/div[1]/div[8]/div/p[1]")));
+	wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[3]/div[1]/div[9]/div/p[1]")));
 	
-	WebElement request = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[3]/div[1]/div[8]/div/p[1]"));
+	WebElement request = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[3]/div[1]/div[9]/div/p[1]"));
 	request.isDisplayed();	
 	
 }
 
+@Test(priority=23,enabled=false)
+public void ApprovalLogout()
+{
+	
+	try
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+	driver.switchTo().defaultContent();
+	
+	WebDriverWait wait5 = new WebDriverWait(driver, 60);
+	wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[1]/div/a")));
+	
+	WebElement logout = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[1]/div/a"));
+	logout.click();                       
+	
+}
 
+
+
+@Test(priority=24,enabled=true)
+public void FirstLevelSearch()
+{
+	
+	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+	JavascriptExecutor jse = (JavascriptExecutor)driver;
+	jse.executeScript("window.scrollBy(0,-250)", "");
+	try
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+	
+	WebDriverWait wait3 = new WebDriverWait(driver, 60);
+	wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"589:0;p\"]")));
+	
+	WebElement search = driver.findElement(By.xpath("//*[@id=\"589:0;p\"]"));
+	search.sendKeys("Jeffrey Folkmann");
+	
+	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+	
+	WebDriverWait wait4 = new WebDriverWait(driver, 60);
+	wait4.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Jeffrey Folkmann")));
+	
+	WebElement dropdown = driver.findElement(By.partialLinkText("Jeffrey Folkmann"));
+	dropdown.click();
+	
+	AMUserDetails();	
+	
+}
+
+@Test(priority=25,enabled=true)
+public void FirstLevelLogin()
+{
+
+	try
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+	driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000001NqqAIAS?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));
+	
+	WebDriverWait wait5 = new WebDriverWait(driver, 60);
+	wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"topButtonRow\"]/input[4]")));	
+	
+	WebElement login = driver.findElement(By.xpath("//*[@id=\"topButtonRow\"]/input[4]"));
+	login.click();       
+	
+	
+}
+
+@Test(priority=26,enabled=true)
+public void FirstLevelHome()
+{
+		try
+		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+		driver.switchTo().defaultContent();
+		
+		WebDriverWait wait1 = new WebDriverWait(driver, 60);
+		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"46:0;p\"]/div/div")));
+		
+		WebElement home = driver.findElement(By.xpath("//*[@id=\"46:0;p\"]/div/div"));
+		home.click();	
+		
+}
+	
+
+@Test(priority=27,enabled=true)
+public void FirstLevelApproval()
+{
+	try
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+	
+	WebDriverWait wait2 = new WebDriverWait(driver, 60);
+	wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'label slds-truncate slds-text-link') and text() = 'Approvals']")));
+	
+	WebElement approval = driver.findElement(By.xpath("//span[contains(@class, 'label slds-truncate slds-text-link') and text() = 'Approvals']"));
+	approval.click();	
+	
+}
+
+@Test(priority=28,enabled=true)
+public void FirstLevelLevelClick()
+{
+		try
+		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.cs63.my.salesforce.com/servlet/servlet.Integration?lid=01r6C00000008jU&ic=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));
+		
+		WebDriverWait wait1 = new WebDriverWait(driver, 60);
+		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[1]/span")));
+			
+		WebElement click = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[1]/span"));
+		click.click();
+		
+		WebDriverWait wait2 = new WebDriverWait(driver, 60);
+		wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[7]/div/div[1]/textarea")));
+		
+		WebElement comment = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[7]/div/div[1]/textarea"));
+		comment.sendKeys("Test");               
+		
+		WebDriverWait wait3 = new WebDriverWait(driver, 60);
+		wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[7]/div/div[2]/button[3]")));
+		
+		WebElement Submit = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[7]/div/div[2]/button[3]"));
+		Submit.click();
+		
+		ApprovalLogout();		
+		
+}
 
 
 }
