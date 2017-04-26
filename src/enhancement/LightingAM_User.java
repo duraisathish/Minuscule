@@ -553,7 +553,7 @@ public void FirstLevelLogin()
 
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-	driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000001NqqAIAS?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));
+	driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000001NqsJIAS?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));
 	
 	WebDriverWait wait5 = new WebDriverWait(driver, 60);
 	wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"topButtonRow\"]/input[4]")));	
@@ -572,9 +572,9 @@ public void FirstLevelHome()
 		driver.switchTo().defaultContent();
 		
 		WebDriverWait wait1 = new WebDriverWait(driver, 60);
-		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"46:0;p\"]/div/div")));
+		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/div/div[1]/div/nav/button")));
 		
-		WebElement home = driver.findElement(By.xpath("//*[@id=\"46:0;p\"]/div/div"));
+		WebElement home = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/div/div[1]/div/nav/button"));
 		home.click();	
 		
 }
@@ -608,15 +608,15 @@ public void FirstLevelLevelClick()
 		click.click();
 		
 		WebDriverWait wait2 = new WebDriverWait(driver, 60);
-		wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[7]/div/div[1]/textarea")));
-		
-		WebElement comment = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[7]/div/div[1]/textarea"));
+		wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[6]/div/div[1]/textarea")));
+																	 	
+		WebElement comment = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[6]/div/div[1]/textarea"));
 		comment.sendKeys("Test");               
 		
 		WebDriverWait wait3 = new WebDriverWait(driver, 60);
-		wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[7]/div/div[2]/button[3]")));
+		wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[6]/div/div[2]/button[3]")));
 		
-		WebElement Submit = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[7]/div/div[2]/button[3]"));
+		WebElement Submit = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[6]/div/div[2]/button[3]"));
 		Submit.click();
 		
 		ApprovalLogout();		

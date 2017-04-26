@@ -6,14 +6,6 @@
       <class name="enhancement.LightingAM_User">
         <methods>
           <include name="FirstLevelLevelClick"/>
-          <include name="FirstLevelLogin"/>
-          <include name="CommentForApproval"/>
-          <include name="Approval"/>
-          <include name="FirstLevelApproval"/>
-          <include name="Approvalclick"/>
-          <include name="FirstLevelHome"/>
-          <include name="LaunchAnalysis"/>
-          <include name="LaunchApproval"/>
         </methods>
       </class> <!-- enhancement.LightingAM_User -->
     </classes>
