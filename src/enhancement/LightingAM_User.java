@@ -31,7 +31,7 @@ public void Login()
 			
 		}
 
-@Test(priority=2,enabled=false)
+@Test(priority=2,enabled=true)
 public void AMUserSearch()
 {
 			driver.switchTo().defaultContent();
@@ -57,7 +57,7 @@ public void AMUserSearch()
 			
  }	
 
-@Test(priority=3,enabled=false)
+@Test(priority=3,enabled=true)
 public void AMUserDetails()
 {
 	try
@@ -71,7 +71,7 @@ public void AMUserDetails()
 	userdetails.click();	
 }
 
-@Test(priority=4,enabled=false)
+@Test(priority=4,enabled=true)
 public void AMUserLogin()
 {
 	try
@@ -82,12 +82,12 @@ public void AMUserLogin()
 	wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"topButtonRow\"]/input[4]")));	
 	
 	WebElement login = driver.findElement(By.xpath("//*[@id=\"topButtonRow\"]/input[4]"));
-	login.click();       //*[@id="topButtonRow"]/input[4]
+	login.click();       
 	
 	
 }
 
-@Test(priority=5,enabled=false)
+@Test(priority=5,enabled=true)
 public void Opportunities()
 {
 	try
@@ -100,7 +100,7 @@ public void Opportunities()
 	opportunity.click();
 }
 
-@Test(priority=6,enabled=false)
+@Test(priority=6,enabled=true)
 public void CreateOpportunity() {			
 	
 
@@ -113,7 +113,7 @@ public void CreateOpportunity() {
 	
 }
 
-@Test(priority=7,enabled=false)
+@Test(priority=7,enabled=true)
 public void CreateNewOpportunity() {	
 		
 	try
@@ -151,7 +151,7 @@ public void CreateNewOpportunity() {
 	
 }
 
-@Test(priority=8,enabled=false)
+@Test(priority=8,enabled=true)
 public void TenantName()
 {
 
@@ -173,7 +173,7 @@ public void TenantName()
 }
 
 
-@Test(priority=9,enabled=false)
+@Test(priority=9,enabled=true)
 public void Units()
 {
 	((JavascriptExecutor)driver).executeScript("scroll(0,200)");	
@@ -201,7 +201,7 @@ public void Units()
 
 
 
-@Test(priority=10,enabled=false)
+@Test(priority=10,enabled=true)
 public void Analysis() 
 {	
 	try
@@ -227,7 +227,7 @@ public void Analysis()
 }
 
 
-@Test(priority=11,enabled=false)
+@Test(priority=11,enabled=true)
 public void ClickAnalysis() 
 {	
 	try
@@ -252,7 +252,7 @@ public void ClickAnalysis()
 	
 }
 
-@Test(priority=12,enabled=false)
+@Test(priority=12,enabled=true)
 public void NewAnalysis()
 {
 	try
@@ -264,7 +264,7 @@ public void NewAnalysis()
 	
 }
 
-@Test(priority=13,enabled=false)
+@Test(priority=13,enabled=true)
 public void UnitsAndSetup()
 {
 	try
@@ -295,7 +295,7 @@ public void UnitsAndSetup()
 }
 
 
-@Test(priority=14,enabled=false)
+@Test(priority=14,enabled=true)
 public void Budget()
 {
 	try
@@ -311,7 +311,7 @@ public void Budget()
 		
 }
 
-@Test(priority=15,enabled=false)
+@Test(priority=15,enabled=true)
 public void RentsAndIncentive()
 {
 	try
@@ -343,7 +343,7 @@ public void RentsAndIncentive()
 
 }
 
-@Test(priority=16,enabled=false)
+@Test(priority=16,enabled=true)
 public void Securities()
 {
 	try
@@ -359,7 +359,7 @@ public void Securities()
 	comment.sendKeys("Test");
 }
 
-@Test(priority=17,enabled=false)
+@Test(priority=17,enabled=true)
 public void SaveAnalysis()
 {
 	((JavascriptExecutor)driver).executeScript("scroll(0,100)");
@@ -372,12 +372,13 @@ public void SaveAnalysis()
 	
 }
 
-@Test(priority=18,enabled=false)
+@Test(priority=18,enabled=true)
 public void LaunchAnalysis()
 {
 	
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+	driver.switchTo().parentFrame();	
 	
 	WebDriverWait wait4 = new WebDriverWait(driver, 60);
 	wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"scenarioPopup0\"]/button")));
@@ -395,7 +396,7 @@ public void LaunchAnalysis()
 	
 }
 
-@Test(priority=19,enabled=false)
+@Test(priority=19,enabled=true)
 public void LaunchApproval()
 {
 	
@@ -422,10 +423,10 @@ public void LaunchApproval()
 	
 }
 
-@Test(priority=20,enabled=false)
+@Test(priority=20,enabled=true)
 public void Approval()
 {
-	driver.switchTo().parentFrame();
+	//driver.switchTo().parentFrame();
 	((JavascriptExecutor)driver).executeScript("scroll(0,100)");
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
@@ -448,7 +449,7 @@ public void Approval()
 }
 
 
-@Test(priority=21,enabled=false)
+@Test(priority=21,enabled=true)
 public void Approvalclick()
 {
 	
@@ -517,24 +518,19 @@ public void ApprovalLogout()
 	
 }
 
-
-
-@Test(priority=24,enabled=true)
-public void FirstLevelSearch()
+@Test(priority=24,enabled=false)
+public void FirtLevelSearch()
 {
-	
-	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-	JavascriptExecutor jse = (JavascriptExecutor)driver;
-	jse.executeScript("window.scrollBy(0,-250)", "");
+	ApprovalLogout();
 	try
-	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}		
 	
-	WebDriverWait wait3 = new WebDriverWait(driver, 60);
-	wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"589:0;p\"]")));
+	WebDriverWait wait1 = new WebDriverWait(driver, 60);
+	wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"174:15;a\"]")));
 	
-	WebElement search = driver.findElement(By.xpath("//*[@id=\"589:0;p\"]"));
-	search.sendKeys("Jeffrey Folkmann");
-	
+	WebElement search = driver.findElement(By.xpath("//*[@id=\"174:15;a\"]"));
+	search.sendKeys("Jeffrey Folkmann");	
+		
 	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	
 	WebDriverWait wait4 = new WebDriverWait(driver, 60);
@@ -543,11 +539,12 @@ public void FirstLevelSearch()
 	WebElement dropdown = driver.findElement(By.partialLinkText("Jeffrey Folkmann"));
 	dropdown.click();
 	
-	AMUserDetails();	
+	AMUserDetails(); 	
 	
 }
 
-@Test(priority=25,enabled=true)
+
+@Test(priority=25,enabled=false)
 public void FirstLevelLogin()
 {
 
@@ -564,7 +561,7 @@ public void FirstLevelLogin()
 	
 }
 
-@Test(priority=26,enabled=true)
+@Test(priority=26,enabled=false)
 public void FirstLevelHome()
 {
 		try
@@ -580,7 +577,7 @@ public void FirstLevelHome()
 }
 	
 
-@Test(priority=27,enabled=true)
+@Test(priority=27,enabled=false)
 public void FirstLevelApproval()
 {
 	try
@@ -594,7 +591,7 @@ public void FirstLevelApproval()
 	
 }
 
-@Test(priority=28,enabled=true)
+@Test(priority=28,enabled=false)
 public void FirstLevelLevelClick()
 {
 		try
@@ -621,6 +618,146 @@ public void FirstLevelLevelClick()
 		
 		ApprovalLogout();		
 		
+}
+
+@Test(priority=29,enabled=false)
+public void SecondLevelSearch()
+{
+	try
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}		
+	
+	WebDriverWait wait1 = new WebDriverWait(driver, 60);
+	wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"174:15;a\"]")));
+	
+	WebElement search = driver.findElement(By.xpath("//*[@id=\"174:15;a\"]"));
+	search.sendKeys("Jacob Thibeault");		
+	
+	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+	
+	WebDriverWait wait4 = new WebDriverWait(driver, 60);
+	wait4.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Jacob Thibeault")));
+	
+	WebElement dropdown = driver.findElement(By.partialLinkText("Jacob Thibeault"));
+	dropdown.click();
+	
+	AMUserDetails();	
+	
+}
+
+@Test(priority=30,enabled=false)
+public void SecondLevelLogin()
+{
+	try
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}															
+	driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000003UZYNIA4?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));									
+	
+	WebDriverWait wait5 = new WebDriverWait(driver, 60);
+	wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"topButtonRow\"]/input[4]")));	
+	
+	WebElement login = driver.findElement(By.xpath("//*[@id=\"topButtonRow\"]/input[4]"));
+	login.click(); 	
+}
+
+@Test(priority=31,enabled=false)
+public void SecondLevelApproval()
+{	
+	FirstLevelHome();
+	FirstLevelApproval();
+	FirstLevelLevelClick();	
+}
+
+
+@Test(priority=32,enabled=false)
+public void ThirdLevelSearch()
+{
+	try
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}		
+	
+	WebDriverWait wait1 = new WebDriverWait(driver, 60);
+	wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"174:15;a\"]")));
+	
+	WebElement search = driver.findElement(By.xpath("//*[@id=\"174:15;a\"]"));
+	search.sendKeys("Carter Andrus");		
+	
+	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+	
+	WebDriverWait wait4 = new WebDriverWait(driver, 60);
+	wait4.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Carter Andrus")));
+	
+	WebElement dropdown = driver.findElement(By.partialLinkText("Carter Andrus"));
+	dropdown.click();
+	
+	AMUserDetails();	
+	
+}
+
+@Test(priority=33,enabled=false)
+public void ThirdLevelLogin()
+{
+	try
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}															
+	driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000001NqtNIAS?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));									
+	
+	WebDriverWait wait5 = new WebDriverWait(driver, 60);
+	wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"topButtonRow\"]/input[4]")));	
+	
+	WebElement login = driver.findElement(By.xpath("//*[@id=\"topButtonRow\"]/input[4]"));
+	login.click(); 	
+}
+
+@Test(priority=34,enabled=false)
+public void ThirdLevelApproval()
+{
+	FirstLevelHome();
+	FirstLevelApproval();
+	FirstLevelLevelClick();		
+}
+
+
+@Test(priority=35,enabled=false)
+public void FourthLevelSearch()
+{
+	try
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}		
+	
+	WebDriverWait wait1 = new WebDriverWait(driver, 60);
+	wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"174:15;a\"]")));
+	
+	WebElement search = driver.findElement(By.xpath("//*[@id=\"174:15;a\"]"));
+	search.sendKeys("Jeremy Giles");		
+	
+	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+	
+	WebDriverWait wait4 = new WebDriverWait(driver, 60);
+	wait4.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Jeremy Giles")));
+	
+	WebElement dropdown = driver.findElement(By.partialLinkText("Jeremy Giles"));
+	dropdown.click();
+	
+	AMUserDetails();	
+	
+}
+
+@Test(priority=36,enabled=false)
+public void FourthLevelLogin()
+{
+	try
+	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}															
+	driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000001NqsDIAS?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));									
+	
+	WebDriverWait wait5 = new WebDriverWait(driver, 60);
+	wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"topButtonRow\"]/input[4]")));	
+	
+	WebElement login = driver.findElement(By.xpath("//*[@id=\"topButtonRow\"]/input[4]"));
+	login.click(); 	
+}
+
+@Test(priority=37,enabled=false)
+public void FourthLevelApproval()
+{
+	FirstLevelHome();
+	FirstLevelApproval();
+	FirstLevelLevelClick();		
 }
 
 

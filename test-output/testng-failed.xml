@@ -5,7 +5,11 @@
     <classes>
       <class name="enhancement.LightingAM_User">
         <methods>
-          <include name="FirstLevelLevelClick"/>
+          <include name="CreateNewOpportunity"/>
+          <include name="Approval"/>
+          <include name="Approvalclick"/>
+          <include name="LaunchAnalysis"/>
+          <include name="LaunchApproval"/>
         </methods>
       </class> <!-- enhancement.LightingAM_User -->
     </classes>
