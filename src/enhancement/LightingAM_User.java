@@ -372,27 +372,38 @@ public void SaveAnalysis()
 	
 }
 
+
 @Test(priority=18,enabled=true)
 public void LaunchAnalysis()
 {
 	
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-	driver.switchTo().parentFrame();	
 	
-	WebDriverWait wait4 = new WebDriverWait(driver, 60);
-	wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"scenarioPopup0\"]/button")));
 	
-	WebElement dropdown = driver.findElement(By.xpath("//*[@id=\"scenarioPopup0\"]/button"));
-	dropdown.click();	
+	try
+	{
+		driver.switchTo().frame(driver.findElement(By.id("iframeLeaseAnalysis")));
+		
+		WebDriverWait wait4 = new WebDriverWait(driver, 60);
+		wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"scenarioPopup0\"]/button")));
+		
+		WebElement dropdown = driver.findElement(By.xpath("//*[@id=\"scenarioPopup0\"]/button"));
+		dropdown.click();	
+		
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		
+		WebDriverWait wait5 = new WebDriverWait(driver, 60);
+		wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"scenarioPopup0\"]/div/ul/li[4]/a")));
+		
+		WebElement launch = driver.findElement(By.xpath("//*[@id=\"scenarioPopup0\"]/div/ul/li[4]/a"));
+		launch.click();
+	}
+	catch(Exception dropdown)
+	{
+		System.out.println("Exception found");
+	}
 	
-	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-	
-	WebDriverWait wait5 = new WebDriverWait(driver, 60);
-	wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"scenarioPopup0\"]/div/ul/li[4]/a")));
-	
-	WebElement launch = driver.findElement(By.xpath("//*[@id=\"scenarioPopup0\"]/div/ul/li[4]/a"));
-	launch.click();
 	
 }
 
@@ -403,6 +414,8 @@ public void LaunchApproval()
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
 	
+	try
+	{
 	WebDriverWait wait4 = new WebDriverWait(driver, 60);
 	wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"scenarioPopup0\"]/button")));
 	
@@ -420,71 +433,52 @@ public void LaunchApproval()
 	dropdown.click();
 	
 	launch.click();
+	}
+	catch(Exception dropdown)
+	{
+		System.out.println("Exception handled");
+	}
 	
 }
 
 @Test(priority=20,enabled=true)
 public void Approval()
 {
-	//driver.switchTo().parentFrame();
-	((JavascriptExecutor)driver).executeScript("scroll(0,100)");
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-	
-	WebDriverWait wait3 = new WebDriverWait(driver, 60);
-	wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='opportunityApp']/div[1]/div[5]/ul/li")));	
-	
-	List<WebElement> element1 = driver.findElements(By.xpath("//*[@id='opportunityApp']/div[1]/div[5]/ul/li"));
-    for(WebElement elements : element1)
-    {
-    	
-    	WebElement test = elements.findElement(By.tagName("a"));      	
-     
-    	if(test.getText().contains("APPROVAL"))
-    	{
-    		test.click();       
-    	}
-        
-    }
+	((JavascriptExecutor)driver).executeScript("scroll(0,100)");
+	driver.switchTo().parentFrame();
+		
+		WebDriverWait wait3 = new WebDriverWait(driver, 60);
+		wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='opportunityApp']/div[1]/div[5]/ul/li")));	
+		
+		List<WebElement> element1 = driver.findElements(By.xpath("//*[@id='opportunityApp']/div[1]/div[5]/ul/li"));
+	    for(WebElement elements : element1)
+	    {
+	    	
+	    	WebElement test = elements.findElement(By.tagName("a"));      	
+	     
+	    	if(test.getText().contains("APPROVAL"))
+	    	{
+	    		test.click();       
+	    	}
+	        
+	    }
 }
 
 
 @Test(priority=21,enabled=true)
-public void Approvalclick()
-{
-	
-	((JavascriptExecutor)driver).executeScript("scroll(0,100)");
-	try
-	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-	
-	WebDriverWait wait3 = new WebDriverWait(driver, 60);
-	wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='opportunityApp']/div[1]/div[5]/ul/li")));	
-	
-	List<WebElement> element1 = driver.findElements(By.xpath("//*[@id='opportunityApp']/div[1]/div[5]/ul/li"));
-    for(WebElement elements : element1)
-    {
-    	
-    	WebElement test = elements.findElement(By.tagName("a"));      	
-     
-    	if(test.getText().contains("APPROVAL"))
-    	{
-    		test.click();       
-    	}
-        
-    }
-}
-
-
-@Test(priority=22,enabled=false)
 public void CommentForApproval()
 {
+	
+	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-	driver.switchTo().frame(driver.findElement(By.id("iframeApproval")));
+	driver.switchTo().frame(driver.findElement(By.id("iframeApproval")));	
 	
 	WebDriverWait wait3 = new WebDriverWait(driver, 60);
 	wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[3]/div[1]/div[4]/textarea")));
-	
+																	
 	WebElement comment = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[3]/div[1]/div[4]/textarea"));
 	comment.sendKeys("Test");	
 	
@@ -502,7 +496,7 @@ public void CommentForApproval()
 	
 }
 
-@Test(priority=23,enabled=false)
+@Test(priority=22,enabled=true)
 public void ApprovalLogout()
 {
 	
@@ -518,10 +512,9 @@ public void ApprovalLogout()
 	
 }
 
-@Test(priority=24,enabled=false)
+@Test(priority=23,enabled=true)
 public void FirtLevelSearch()
 {
-	ApprovalLogout();
 	try
 	{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}		
 	
@@ -544,7 +537,7 @@ public void FirtLevelSearch()
 }
 
 
-@Test(priority=25,enabled=false)
+@Test(priority=24,enabled=true)
 public void FirstLevelLogin()
 {
 
@@ -561,7 +554,7 @@ public void FirstLevelLogin()
 	
 }
 
-@Test(priority=26,enabled=false)
+@Test(priority=25,enabled=true)
 public void FirstLevelHome()
 {
 		try
@@ -577,7 +570,7 @@ public void FirstLevelHome()
 }
 	
 
-@Test(priority=27,enabled=false)
+@Test(priority=26,enabled=true)
 public void FirstLevelApproval()
 {
 	try
@@ -591,7 +584,7 @@ public void FirstLevelApproval()
 	
 }
 
-@Test(priority=28,enabled=false)
+@Test(priority=27,enabled=true)
 public void FirstLevelLevelClick()
 {
 		try
@@ -620,7 +613,7 @@ public void FirstLevelLevelClick()
 		
 }
 
-@Test(priority=29,enabled=false)
+@Test(priority=28,enabled=true)
 public void SecondLevelSearch()
 {
 	try
@@ -644,7 +637,7 @@ public void SecondLevelSearch()
 	
 }
 
-@Test(priority=30,enabled=false)
+@Test(priority=29,enabled=true)
 public void SecondLevelLogin()
 {
 	try
@@ -658,7 +651,7 @@ public void SecondLevelLogin()
 	login.click(); 	
 }
 
-@Test(priority=31,enabled=false)
+@Test(priority=30,enabled=true)
 public void SecondLevelApproval()
 {	
 	FirstLevelHome();
@@ -667,7 +660,7 @@ public void SecondLevelApproval()
 }
 
 
-@Test(priority=32,enabled=false)
+@Test(priority=31,enabled=true)
 public void ThirdLevelSearch()
 {
 	try
@@ -691,7 +684,7 @@ public void ThirdLevelSearch()
 	
 }
 
-@Test(priority=33,enabled=false)
+@Test(priority=32,enabled=true)
 public void ThirdLevelLogin()
 {
 	try
@@ -705,7 +698,7 @@ public void ThirdLevelLogin()
 	login.click(); 	
 }
 
-@Test(priority=34,enabled=false)
+@Test(priority=33,enabled=true)
 public void ThirdLevelApproval()
 {
 	FirstLevelHome();
@@ -714,7 +707,7 @@ public void ThirdLevelApproval()
 }
 
 
-@Test(priority=35,enabled=false)
+@Test(priority=34,enabled=true)
 public void FourthLevelSearch()
 {
 	try
@@ -738,7 +731,7 @@ public void FourthLevelSearch()
 	
 }
 
-@Test(priority=36,enabled=false)
+@Test(priority=35,enabled=true)
 public void FourthLevelLogin()
 {
 	try
@@ -752,7 +745,7 @@ public void FourthLevelLogin()
 	login.click(); 	
 }
 
-@Test(priority=37,enabled=false)
+@Test(priority=36,enabled=true)
 public void FourthLevelApproval()
 {
 	FirstLevelHome();

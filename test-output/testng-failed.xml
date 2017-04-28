@@ -5,9 +5,8 @@
     <classes>
       <class name="enhancement.LightingAM_User">
         <methods>
-          <include name="CreateNewOpportunity"/>
-          <include name="Approval"/>
-          <include name="Approvalclick"/>
+          <include name="SecondLevelSearch"/>
+          <include name="ThirdLevelSearch"/>
           <include name="LaunchAnalysis"/>
           <include name="LaunchApproval"/>
         </methods>
