@@ -2,88 +2,88 @@
 <testng-results skipped="0" failed="0" ignored="0" total="20" passed="20">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="170686" started-at="2017-04-29T11:27:49Z" finished-at="2017-04-29T11:30:40Z">
+  <suite name="Default suite" duration-ms="162463" started-at="2017-05-04T16:12:29Z" finished-at="2017-05-04T16:15:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="170686" started-at="2017-04-29T11:27:49Z" finished-at="2017-04-29T11:30:40Z">
+    <test name="Default test" duration-ms="162463" started-at="2017-05-04T16:12:29Z" finished-at="2017-05-04T16:15:11Z">
       <class name="enhancement.LightingNegativeScenario">
-        <test-method status="PASS" signature="Login()[pri:1, instance:enhancement.LightingNegativeScenario@437da279]" name="Login" duration-ms="16514" started-at="2017-04-29T16:57:49Z" finished-at="2017-04-29T16:58:05Z">
+        <test-method status="PASS" signature="Login()[pri:1, instance:enhancement.LightingNegativeScenario@437da279]" name="Login" duration-ms="14022" started-at="2017-05-04T21:42:29Z" finished-at="2017-05-04T21:42:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="AMUserSearch()[pri:2, instance:enhancement.LightingNegativeScenario@437da279]" name="AMUserSearch" duration-ms="20930" started-at="2017-04-29T16:58:05Z" finished-at="2017-04-29T16:58:26Z">
+        <test-method status="PASS" signature="AMUserSearch()[pri:2, instance:enhancement.LightingNegativeScenario@437da279]" name="AMUserSearch" duration-ms="17930" started-at="2017-05-04T21:42:43Z" finished-at="2017-05-04T21:43:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AMUserSearch -->
-        <test-method status="PASS" signature="AMUserDetails()[pri:3, instance:enhancement.LightingNegativeScenario@437da279]" name="AMUserDetails" duration-ms="4294" started-at="2017-04-29T16:58:26Z" finished-at="2017-04-29T16:58:31Z">
+        <test-method status="PASS" signature="AMUserDetails()[pri:3, instance:enhancement.LightingNegativeScenario@437da279]" name="AMUserDetails" duration-ms="4403" started-at="2017-05-04T21:43:01Z" finished-at="2017-05-04T21:43:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AMUserDetails -->
-        <test-method status="PASS" signature="AMUserLogin()[pri:4, instance:enhancement.LightingNegativeScenario@437da279]" name="AMUserLogin" duration-ms="7686" started-at="2017-04-29T16:58:31Z" finished-at="2017-04-29T16:58:38Z">
+        <test-method status="PASS" signature="AMUserLogin()[pri:4, instance:enhancement.LightingNegativeScenario@437da279]" name="AMUserLogin" duration-ms="7528" started-at="2017-05-04T21:43:05Z" finished-at="2017-05-04T21:43:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AMUserLogin -->
-        <test-method status="PASS" signature="Opportunities()[pri:5, instance:enhancement.LightingNegativeScenario@437da279]" name="Opportunities" duration-ms="7547" started-at="2017-04-29T16:58:38Z" finished-at="2017-04-29T16:58:46Z">
+        <test-method status="PASS" signature="Opportunities()[pri:5, instance:enhancement.LightingNegativeScenario@437da279]" name="Opportunities" duration-ms="5978" started-at="2017-05-04T21:43:12Z" finished-at="2017-05-04T21:43:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Opportunities -->
-        <test-method status="PASS" signature="CreateOpportunity()[pri:6, instance:enhancement.LightingNegativeScenario@437da279]" name="CreateOpportunity" duration-ms="3427" started-at="2017-04-29T16:58:46Z" finished-at="2017-04-29T16:58:49Z">
+        <test-method status="PASS" signature="CreateOpportunity()[pri:6, instance:enhancement.LightingNegativeScenario@437da279]" name="CreateOpportunity" duration-ms="3631" started-at="2017-05-04T21:43:18Z" finished-at="2017-05-04T21:43:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateOpportunity -->
-        <test-method status="PASS" signature="CreateNewOpportunity()[pri:7, instance:enhancement.LightingNegativeScenario@437da279]" name="CreateNewOpportunity" duration-ms="8932" started-at="2017-04-29T16:58:49Z" finished-at="2017-04-29T16:58:58Z">
+        <test-method status="PASS" signature="CreateNewOpportunity()[pri:7, instance:enhancement.LightingNegativeScenario@437da279]" name="CreateNewOpportunity" duration-ms="8457" started-at="2017-05-04T21:43:22Z" finished-at="2017-05-04T21:43:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateNewOpportunity -->
-        <test-method status="PASS" signature="Units()[pri:8, instance:enhancement.LightingNegativeScenario@437da279]" name="Units" duration-ms="4755" started-at="2017-04-29T16:58:58Z" finished-at="2017-04-29T16:59:03Z">
+        <test-method status="PASS" signature="Units()[pri:8, instance:enhancement.LightingNegativeScenario@437da279]" name="Units" duration-ms="4763" started-at="2017-05-04T21:43:31Z" finished-at="2017-05-04T21:43:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Units -->
-        <test-method status="PASS" signature="Analysis()[pri:9, instance:enhancement.LightingNegativeScenario@437da279]" name="Analysis" duration-ms="4837" started-at="2017-04-29T16:59:03Z" finished-at="2017-04-29T16:59:08Z">
+        <test-method status="PASS" signature="Analysis()[pri:9, instance:enhancement.LightingNegativeScenario@437da279]" name="Analysis" duration-ms="4768" started-at="2017-05-04T21:43:35Z" finished-at="2017-05-04T21:43:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Analysis -->
-        <test-method status="PASS" signature="ClickAnalysis()[pri:10, instance:enhancement.LightingNegativeScenario@437da279]" name="ClickAnalysis" duration-ms="2255" started-at="2017-04-29T16:59:08Z" finished-at="2017-04-29T16:59:10Z">
+        <test-method status="PASS" signature="ClickAnalysis()[pri:10, instance:enhancement.LightingNegativeScenario@437da279]" name="ClickAnalysis" duration-ms="2272" started-at="2017-05-04T21:43:40Z" finished-at="2017-05-04T21:43:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ClickAnalysis -->
-        <test-method status="PASS" signature="NewAnalysis()[pri:11, instance:enhancement.LightingNegativeScenario@437da279]" name="NewAnalysis" duration-ms="3400" started-at="2017-04-29T16:59:10Z" finished-at="2017-04-29T16:59:14Z">
+        <test-method status="PASS" signature="NewAnalysis()[pri:11, instance:enhancement.LightingNegativeScenario@437da279]" name="NewAnalysis" duration-ms="3613" started-at="2017-05-04T21:43:42Z" finished-at="2017-05-04T21:43:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NewAnalysis -->
-        <test-method status="PASS" signature="UnitsAndSetup()[pri:12, instance:enhancement.LightingNegativeScenario@437da279]" name="UnitsAndSetup" duration-ms="3954" started-at="2017-04-29T16:59:14Z" finished-at="2017-04-29T16:59:18Z">
+        <test-method status="PASS" signature="UnitsAndSetup()[pri:12, instance:enhancement.LightingNegativeScenario@437da279]" name="UnitsAndSetup" duration-ms="4059" started-at="2017-05-04T21:43:46Z" finished-at="2017-05-04T21:43:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- UnitsAndSetup -->
-        <test-method status="PASS" signature="Budget()[pri:13, instance:enhancement.LightingNegativeScenario@437da279]" name="Budget" duration-ms="2244" started-at="2017-04-29T16:59:18Z" finished-at="2017-04-29T16:59:20Z">
+        <test-method status="PASS" signature="Budget()[pri:13, instance:enhancement.LightingNegativeScenario@437da279]" name="Budget" duration-ms="2257" started-at="2017-05-04T21:43:50Z" finished-at="2017-05-04T21:43:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Budget -->
-        <test-method status="PASS" signature="RentsAndIncentive()[pri:14, instance:enhancement.LightingNegativeScenario@437da279]" name="RentsAndIncentive" duration-ms="4333" started-at="2017-04-29T16:59:20Z" finished-at="2017-04-29T16:59:24Z">
+        <test-method status="PASS" signature="RentsAndIncentive()[pri:14, instance:enhancement.LightingNegativeScenario@437da279]" name="RentsAndIncentive" duration-ms="4165" started-at="2017-05-04T21:43:52Z" finished-at="2017-05-04T21:43:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RentsAndIncentive -->
-        <test-method status="PASS" signature="Securities()[pri:15, instance:enhancement.LightingNegativeScenario@437da279]" name="Securities" duration-ms="2830" started-at="2017-04-29T16:59:24Z" finished-at="2017-04-29T16:59:27Z">
+        <test-method status="PASS" signature="Securities()[pri:15, instance:enhancement.LightingNegativeScenario@437da279]" name="Securities" duration-ms="2986" started-at="2017-05-04T21:43:56Z" finished-at="2017-05-04T21:43:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Securities -->
-        <test-method status="PASS" signature="SaveAnalysis()[pri:16, instance:enhancement.LightingNegativeScenario@437da279]" name="SaveAnalysis" duration-ms="2232" started-at="2017-04-29T16:59:27Z" finished-at="2017-04-29T16:59:29Z">
+        <test-method status="PASS" signature="SaveAnalysis()[pri:16, instance:enhancement.LightingNegativeScenario@437da279]" name="SaveAnalysis" duration-ms="2258" started-at="2017-05-04T21:43:59Z" finished-at="2017-05-04T21:44:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SaveAnalysis -->
-        <test-method status="PASS" signature="LaunchAnalysis()[pri:17, instance:enhancement.LightingNegativeScenario@437da279]" name="LaunchAnalysis" duration-ms="64950" started-at="2017-04-29T16:59:29Z" finished-at="2017-04-29T17:00:34Z">
+        <test-method status="PASS" signature="LaunchAnalysis()[pri:17, instance:enhancement.LightingNegativeScenario@437da279]" name="LaunchAnalysis" duration-ms="63781" started-at="2017-05-04T21:44:02Z" finished-at="2017-05-04T21:45:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchAnalysis -->
-        <test-method status="PASS" signature="LaunchApproval()[pri:18, instance:enhancement.LightingNegativeScenario@437da279]" name="LaunchApproval" duration-ms="2761" started-at="2017-04-29T17:00:34Z" finished-at="2017-04-29T17:00:37Z">
+        <test-method status="PASS" signature="LaunchApproval()[pri:18, instance:enhancement.LightingNegativeScenario@437da279]" name="LaunchApproval" duration-ms="2896" started-at="2017-05-04T21:45:06Z" finished-at="2017-05-04T21:45:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LaunchApproval -->
-        <test-method status="PASS" signature="Overview()[pri:19, instance:enhancement.LightingNegativeScenario@437da279]" name="Overview" duration-ms="2611" started-at="2017-04-29T17:00:37Z" finished-at="2017-04-29T17:00:39Z">
+        <test-method status="PASS" signature="Overview()[pri:19, instance:enhancement.LightingNegativeScenario@437da279]" name="Overview" duration-ms="2464" started-at="2017-05-04T21:45:08Z" finished-at="2017-05-04T21:45:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Overview -->
-        <test-method status="PASS" signature="TenantNameError()[pri:20, instance:enhancement.LightingNegativeScenario@437da279]" name="TenantNameError" duration-ms="127" started-at="2017-04-29T17:00:39Z" finished-at="2017-04-29T17:00:40Z">
+        <test-method status="PASS" signature="TenantNameError()[pri:20, instance:enhancement.LightingNegativeScenario@437da279]" name="TenantNameError" duration-ms="152" started-at="2017-05-04T21:45:11Z" finished-at="2017-05-04T21:45:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TenantNameError -->

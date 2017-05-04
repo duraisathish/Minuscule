@@ -51,6 +51,14 @@ public class LightingNegativeScenario {
 
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
+		WebDriverWait wait2 = new WebDriverWait(driver, 60);
+		wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Rob Antrobius\" in Salesforce']")));
+
+		WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Rob Antrobius\" in Salesforce']"));
+		suggestion.click();			
+
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);			
+
 		WebDriverWait wait4 = new WebDriverWait(driver, 60);
 		wait4.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Rob Antrobius")));
 

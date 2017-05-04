@@ -49,12 +49,19 @@ public class LightingAM_User {
 
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
+		WebDriverWait wait2 = new WebDriverWait(driver, 60);
+		wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Rob Antrobius\" in Salesforce']")));
+
+		WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Rob Antrobius\" in Salesforce']"));
+		suggestion.click();			
+
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);			
+
 		WebDriverWait wait4 = new WebDriverWait(driver, 60);
 		wait4.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Rob Antrobius")));
 
 		WebElement dropdown = driver.findElement(By.partialLinkText("Rob Antrobius"));
 		dropdown.click();	
-
 	}	
 
 	@Test(priority=3,enabled=true)
@@ -401,7 +408,7 @@ public class LightingAM_User {
 		}
 		catch(Exception dropdown)
 		{
-			System.out.println("Exception found");
+
 		}
 
 
@@ -436,7 +443,7 @@ public class LightingAM_User {
 		}
 		catch(Exception dropdown)
 		{
-			System.out.println("Exception handled");
+
 		}
 
 	}
@@ -513,7 +520,7 @@ public class LightingAM_User {
 	}
 
 	@Test(priority=23,enabled=true)
-	public void FirtLevelSearch()
+	public void FirstLevelSearch()
 	{
 		try
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
@@ -524,22 +531,32 @@ public class LightingAM_User {
 			wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"174:15;a\"]")));
 
 			WebElement search = driver.findElement(By.xpath("//*[@id=\"174:15;a\"]"));
-			search.sendKeys("Jeffrey Folkmann");	
+			search.sendKeys("Jeffrey folkman");	
 
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
-			WebDriverWait wait4 = new WebDriverWait(driver, 60);
-			wait4.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Jeffrey Folkmann")));
+			WebDriverWait wait2 = new WebDriverWait(driver, 60);
+			wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jeffrey folkman\" in Salesforce']")));
 
-			WebElement dropdown = driver.findElement(By.partialLinkText("Jeffrey Folkmann"));
+			WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jeffrey folkman\" in Salesforce']"));
+			suggestion.click();			
+
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);			
+
+			WebDriverWait wait4 = new WebDriverWait(driver, 60);
+			wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='textUnderline outputLookupLink slds-truncate forceOutputLookup' and contains(text(),'Jeffrey Folkmann')]")));
+
+			WebElement dropdown = driver.findElement(By.xpath("//*[@class='textUnderline outputLookupLink slds-truncate forceOutputLookup' and contains(text(),'Jeffrey Folkmann')]"));
 			dropdown.click();
+
 		}
-		catch(Exception search)
+		catch(Exception dropdown)
 		{
 
 		}
 
-		AMUserDetails(); 	
+		AMUserDetails();
+
 
 	}
 
@@ -567,6 +584,12 @@ public class LightingAM_User {
 		try
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
 		driver.switchTo().defaultContent();
+
+		WebDriverWait wait6 = new WebDriverWait(driver, 60);
+		wait6.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[1]/div/a")));
+
+		WebElement logout = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[1]/div/a"));
+		logout.isDisplayed(); 
 
 		WebDriverWait wait1 = new WebDriverWait(driver, 60);
 		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/div/div[1]/div/nav/button")));
@@ -596,25 +619,33 @@ public class LightingAM_User {
 	{
 		try
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.cs63.my.salesforce.com/servlet/servlet.Integration?lid=01r6C00000008jU&ic=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));
 
-		WebDriverWait wait1 = new WebDriverWait(driver, 60);
-		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[1]/span")));
+		try{		
 
-		WebElement click = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[1]/span"));
-		click.click();
+			driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.cs63.my.salesforce.com/servlet/servlet.Integration?lid=01r6C00000008jU&ic=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));
 
-		WebDriverWait wait2 = new WebDriverWait(driver, 60);
-		wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[6]/div/div[1]/textarea")));
+			WebDriverWait wait1 = new WebDriverWait(driver, 60);
+			wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[1]/span")));
 
-		WebElement comment = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[6]/div/div[1]/textarea"));
-		comment.sendKeys("Test");               
+			WebElement click = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[1]/span"));
+			click.click();
 
-		WebDriverWait wait3 = new WebDriverWait(driver, 60);
-		wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[6]/div/div[2]/button[3]")));
+			WebDriverWait wait2 = new WebDriverWait(driver, 60);
+			wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[6]/div/div[1]/textarea")));
 
-		WebElement Submit = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[6]/div/div[2]/button[3]"));
-		Submit.click();
+			WebElement comment = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[6]/div/div[1]/textarea"));
+			comment.sendKeys("Test");               
+
+			WebDriverWait wait3 = new WebDriverWait(driver, 60);
+			wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[6]/div/div[2]/button[3]")));
+
+			WebElement Submit = driver.findElement(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[11]/div/div[6]/div/div[2]/button[3]"));
+			Submit.click();
+		}
+		catch(Exception submit)
+		{
+
+		}
 
 		ApprovalLogout();		
 
@@ -626,21 +657,37 @@ public class LightingAM_User {
 		try
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}		
 
-		WebDriverWait wait1 = new WebDriverWait(driver, 60);
-		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"174:15;a\"]")));
+		try
+		{	
+			WebDriverWait wait1 = new WebDriverWait(driver, 60);
+			wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"174:15;a\"]")));
 
-		WebElement search = driver.findElement(By.xpath("//*[@id=\"174:15;a\"]"));
-		search.sendKeys("Jacob Thibeault");		
+			WebElement search = driver.findElement(By.xpath("//*[@id=\"174:15;a\"]"));
+			search.sendKeys("Jacob Thibeault");	
 
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
-		WebDriverWait wait4 = new WebDriverWait(driver, 60);
-		wait4.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Jacob Thibeault")));
+			WebDriverWait wait2 = new WebDriverWait(driver, 60);
+			wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jacob Thibeault\" in Salesforce']")));
 
-		WebElement dropdown = driver.findElement(By.partialLinkText("Jacob Thibeault"));
-		dropdown.click();
+			WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jacob Thibeault\" in Salesforce']"));
+			suggestion.click();			
 
-		AMUserDetails();	
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);			
+
+			WebDriverWait wait4 = new WebDriverWait(driver, 60);
+			wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='textUnderline outputLookupLink slds-truncate forceOutputLookup' and contains(text(),'Jacob Thibeault')]")));
+
+			WebElement dropdown = driver.findElement(By.xpath("//*[@class='textUnderline outputLookupLink slds-truncate forceOutputLookup' and contains(text(),'Jacob Thibeault')]"));
+			dropdown.click();
+
+		}
+		catch(Exception dropdown)
+		{
+
+		}
+
+		AMUserDetails();
 
 	}
 
@@ -673,19 +720,35 @@ public class LightingAM_User {
 		try
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}		
 
-		WebDriverWait wait1 = new WebDriverWait(driver, 60);
-		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"174:15;a\"]")));
+		try
+		{	
+			WebDriverWait wait1 = new WebDriverWait(driver, 60);
+			wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"174:15;a\"]")));
 
-		WebElement search = driver.findElement(By.xpath("//*[@id=\"174:15;a\"]"));
-		search.sendKeys("Carter Andrus");		
+			WebElement search = driver.findElement(By.xpath("//*[@id=\"174:15;a\"]"));
+			search.sendKeys("Carter Andrus");	
 
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
-		WebDriverWait wait4 = new WebDriverWait(driver, 60);
-		wait4.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Carter Andrus")));
+			WebDriverWait wait2 = new WebDriverWait(driver, 60);
+			wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Carter Andrus\" in Salesforce']")));
 
-		WebElement dropdown = driver.findElement(By.partialLinkText("Carter Andrus"));
-		dropdown.click();
+			WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Carter Andrus\" in Salesforce']"));
+			suggestion.click();			
+
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);			
+
+			WebDriverWait wait4 = new WebDriverWait(driver, 60);
+			wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='textUnderline outputLookupLink slds-truncate forceOutputLookup' and contains(text(),'Carter Andrus')]")));
+
+			WebElement dropdown = driver.findElement(By.xpath("//*[@class='textUnderline outputLookupLink slds-truncate forceOutputLookup' and contains(text(),'Carter Andrus')]"));
+			dropdown.click();
+
+		}
+		catch(Exception dropdown)
+		{
+
+		}
 
 		AMUserDetails();	
 
@@ -720,19 +783,35 @@ public class LightingAM_User {
 		try
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}		
 
-		WebDriverWait wait1 = new WebDriverWait(driver, 60);
-		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"174:15;a\"]")));
+		try
+		{	
+			WebDriverWait wait1 = new WebDriverWait(driver, 60);
+			wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"174:15;a\"]")));
 
-		WebElement search = driver.findElement(By.xpath("//*[@id=\"174:15;a\"]"));
-		search.sendKeys("Jeremy Giles");		
+			WebElement search = driver.findElement(By.xpath("//*[@id=\"174:15;a\"]"));
+			search.sendKeys("Jeremy Giles");	
 
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
-		WebDriverWait wait4 = new WebDriverWait(driver, 60);
-		wait4.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Jeremy Giles")));
+			WebDriverWait wait2 = new WebDriverWait(driver, 60);
+			wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jeremy Giles\" in Salesforce']")));
 
-		WebElement dropdown = driver.findElement(By.partialLinkText("Jeremy Giles"));
-		dropdown.click();
+			WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jeremy Giles\" in Salesforce']"));
+			suggestion.click();			
+
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);			
+
+			WebDriverWait wait4 = new WebDriverWait(driver, 60);
+			wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='textUnderline outputLookupLink slds-truncate forceOutputLookup' and contains(text(),'Jeremy Giles')]")));
+
+			WebElement dropdown = driver.findElement(By.xpath("//*[@class='textUnderline outputLookupLink slds-truncate forceOutputLookup' and contains(text(),'Jeremy Giles')]"));
+			dropdown.click();
+
+		}
+		catch(Exception dropdown)
+		{
+
+		}
 
 		AMUserDetails();	
 
@@ -759,6 +838,5 @@ public class LightingAM_User {
 		FirstLevelApproval();
 		FirstLevelLevelClick();		
 	}
-
 
 }

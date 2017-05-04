@@ -50,11 +50,19 @@ public class LightingEU_User {
 
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
+		WebDriverWait wait2 = new WebDriverWait(driver, 60);
+		wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Moritz Heissenberg\" in Salesforce']")));
+
+		WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Moritz Heissenberg\" in Salesforce']"));
+		suggestion.click();			
+
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);			
+
 		WebDriverWait wait4 = new WebDriverWait(driver, 60);
 		wait4.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Moritz Heissenberg")));
 
 		WebElement dropdown = driver.findElement(By.partialLinkText("Moritz Heissenberg"));
-		dropdown.click();	
+		dropdown.click();
 
 	}
 
@@ -335,7 +343,7 @@ public class LightingEU_User {
 		wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"leaseAnalysisApp\"]/ng-include/div/div/div[2]/div/ng-include[2]/div/div[2]/ui-view/div/div/div[3]/div[1]/div[4]/div[6]/div[2]/span[2]/span/span[1]/input[1]")));	
 
 		WebElement date = driver.findElement(By.xpath("//*[@id=\"leaseAnalysisApp\"]/ng-include/div/div/div[2]/div/ng-include[2]/div/div[2]/ui-view/div/div/div[3]/div[1]/div[4]/div[6]/div[2]/span[2]/span/span[1]/input[1]"));
-		date.sendKeys("15");	
+		date.sendKeys("31");	
 
 		WebElement month = driver.findElement(By.xpath("//*[@id=\"leaseAnalysisApp\"]/ng-include/div/div/div[2]/div/ng-include[2]/div/div[2]/ui-view/div/div/div[3]/div[1]/div[4]/div[6]/div[2]/span[2]/span/span[1]/input[2]"));
 		month.sendKeys("05");
@@ -418,7 +426,7 @@ public class LightingEU_User {
 		}
 		catch(Exception dropdown)
 		{
-			System.out.println("Exception found");
+
 		}
 
 
@@ -453,7 +461,7 @@ public class LightingEU_User {
 		}
 		catch(Exception dropdown)
 		{
-			System.out.println("Exception handled");
+
 		}
 
 	}
@@ -465,8 +473,6 @@ public class LightingEU_User {
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
 		try
 		{
-
-
 			((JavascriptExecutor)driver).executeScript("scroll(0,100)");
 			driver.switchTo().parentFrame();
 
@@ -554,18 +560,27 @@ public class LightingEU_User {
 
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
-			WebDriverWait wait4 = new WebDriverWait(driver, 60);
-			wait4.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Bram Verhoeven")));
+			WebDriverWait wait2 = new WebDriverWait(driver, 60);
+			wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Bram Verhoeven\" in Salesforce']")));
 
-			WebElement dropdown = driver.findElement(By.partialLinkText("Bram Verhoeven"));
+			WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Bram Verhoeven\" in Salesforce']"));
+			suggestion.click();			
+
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);			
+
+			WebDriverWait wait4 = new WebDriverWait(driver, 60);
+			wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='textUnderline outputLookupLink slds-truncate forceOutputLookup' and contains(text(),'Bram Verhoeven')]")));
+
+			WebElement dropdown = driver.findElement(By.xpath("//*[@class='textUnderline outputLookupLink slds-truncate forceOutputLookup' and contains(text(),'Bram Verhoeven')]"));
 			dropdown.click();
+
 		}
-		catch(Exception search)
+		catch(Exception dropdown)
 		{
 
 		}
 
-		EUUserDetails(); 	
+		EUUserDetails();
 
 	}
 
@@ -592,6 +607,12 @@ public class LightingEU_User {
 		try
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
 		driver.switchTo().defaultContent();
+
+		WebDriverWait wait5 = new WebDriverWait(driver, 60);
+		wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[1]/div/a")));
+
+		WebElement logout = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[1]/div/a"));
+		logout.isDisplayed();
 
 		WebDriverWait wait1 = new WebDriverWait(driver, 60);
 		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/div/div[1]/div/nav/button")));
@@ -668,18 +689,27 @@ public class LightingEU_User {
 
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
-			WebDriverWait wait4 = new WebDriverWait(driver, 60);
-			wait4.until(ExpectedConditions.elementToBeClickable(By.partialLinkText("Mark Zulve")));
+			WebDriverWait wait2 = new WebDriverWait(driver, 60);
+			wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Mark Zulve\" in Salesforce']")));
 
-			WebElement dropdown = driver.findElement(By.partialLinkText("Mark Zulve"));
+			WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Mark Zulve\" in Salesforce']"));
+			suggestion.click();			
+
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);			
+
+			WebDriverWait wait4 = new WebDriverWait(driver, 60);
+			wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='textUnderline outputLookupLink slds-truncate forceOutputLookup' and contains(text(),'Mark Zulve')]")));
+
+			WebElement dropdown = driver.findElement(By.xpath("//*[@class='textUnderline outputLookupLink slds-truncate forceOutputLookup' and contains(text(),'Mark Zulve')]"));
 			dropdown.click();
+
 		}
-		catch(Exception search)
+		catch(Exception dropdown)
 		{
 
 		}
 
-		EUUserDetails(); 	
+		EUUserDetails();	
 
 	}
 
