@@ -42,18 +42,24 @@ public class LightingAM_User {
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
 
 		WebDriverWait wait3 = new WebDriverWait(driver, 60);
-		wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"589:0;p\"]")));
+		wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"221:0;p\"]")));
 
-		WebElement search = driver.findElement(By.xpath("//*[@id=\"589:0;p\"]"));
+		WebElement search = driver.findElement(By.xpath("//*[@id=\"221:0;p\"]"));
 		search.sendKeys("Rob Antrobius");
 
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
-		WebDriverWait wait2 = new WebDriverWait(driver, 60);
+		/*WebDriverWait wait2 = new WebDriverWait(driver, 60);
 		wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Rob Antrobius\" in Salesforce']")));
 
 		WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Rob Antrobius\" in Salesforce']"));
-		suggestion.click();			
+		suggestion.click();	*/	
+		
+		WebDriverWait wait2 = new WebDriverWait(driver, 60);
+		wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Rob Antrobius\"']")));
+
+		WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Rob Antrobius\"']"));
+		suggestion.click();	
 
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);			
 
@@ -83,8 +89,11 @@ public class LightingAM_User {
 	{
 		try
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000001NqqAIAS?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));
-
+		/*//driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000001NqqAIAS?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));
+		 */
+		
+		driver.switchTo().frame(driver.findElement(By.cssSelector("iframe[title='User: Rob Antrobius ~ Salesforce - Unlimited Edition']")));
+		
 		WebDriverWait wait5 = new WebDriverWait(driver, 60);
 		wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"topButtonRow\"]/input[4]")));	
 
@@ -100,10 +109,16 @@ public class LightingAM_User {
 		try
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
 
-		WebDriverWait wait1 = new WebDriverWait(driver, 30);
+		/*WebDriverWait wait1 = new WebDriverWait(driver, 30);
 		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/div/div[2]/nav/ul/li[5]/a/span")));
 
 		WebElement opportunity = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/div/div[2]/nav/ul/li[5]/a/span"));
+		opportunity.click();*/
+		
+		WebDriverWait wait1 = new WebDriverWait(driver, 30);
+		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[5]/a/span")));
+
+		WebElement opportunity = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[5]/a/span"));
 		opportunity.click();
 	}
 
@@ -513,7 +528,7 @@ public class LightingAM_User {
 
 		WebDriverWait wait5 = new WebDriverWait(driver, 60);
 		wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[1]/div/a")));
-
+		
 		WebElement logout = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[1]/div/a"));
 		logout.click();                       
 
@@ -527,19 +542,31 @@ public class LightingAM_User {
 
 		try
 		{	
-			WebDriverWait wait1 = new WebDriverWait(driver, 60);
-			wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"174:15;a\"]")));
+			WebDriverWait wait6 = new WebDriverWait(driver, 60);
+			wait6.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[5]/div[1]/section/div[1]/div[1]/div/div/div[2]/div[1]/div[2]/div/div[2]/ul/li[1]/a")));
 
-			WebElement search = driver.findElement(By.xpath("//*[@id=\"174:15;a\"]"));
+			WebElement setup = driver.findElement(By.xpath("/html/body/div[5]/div[1]/section/div[1]/div[1]/div/div/div[2]/div[1]/div[2]/div/div[2]/ul/li[1]/a"));
+			setup.isDisplayed();				
+			
+			WebDriverWait wait1 = new WebDriverWait(driver, 60);
+			wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"216:20;a\"]")));
+
+			WebElement search = driver.findElement(By.xpath("//*[@id=\"216:20;a\"]"));
 			search.sendKeys("Jeffrey folkman");	
 
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
-			WebDriverWait wait2 = new WebDriverWait(driver, 60);
+			/*WebDriverWait wait2 = new WebDriverWait(driver, 60);
 			wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jeffrey folkman\" in Salesforce']")));
 
 			WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jeffrey folkman\" in Salesforce']"));
-			suggestion.click();			
+			suggestion.click();	*/	
+			
+			WebDriverWait wait2 = new WebDriverWait(driver, 60);
+			wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jeffrey folkman\"']")));
+
+			WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jeffrey folkman\"']"));
+			suggestion.click();	
 
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);			
 
@@ -567,8 +594,10 @@ public class LightingAM_User {
 
 		try
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000001NqsJIAS?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));
+		/*driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000001NqsJIAS?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));*/
 
+		driver.switchTo().frame(driver.findElement(By.cssSelector("iframe[title='User: Jeffrey Folkmann ~ Salesforce - Unlimited Edition']")));
+		
 		WebDriverWait wait5 = new WebDriverWait(driver, 60);
 		wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"topButtonRow\"]/input[4]")));	
 
@@ -591,11 +620,19 @@ public class LightingAM_User {
 		WebElement logout = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[1]/div/a"));
 		logout.isDisplayed(); 
 
-		WebDriverWait wait1 = new WebDriverWait(driver, 60);
+		/*WebDriverWait wait1 = new WebDriverWait(driver, 60);
 		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/div/div[1]/div/nav/button")));
 
 		WebElement home = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/div/div[1]/div/nav/button"));
+		home.click();	*/
+		
+		WebDriverWait wait1 = new WebDriverWait(driver, 60);
+		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[1]/div/nav/one-app-launcher-header/button")));
+		
+		WebElement home = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[1]/div/nav/one-app-launcher-header/button"));
 		home.click();	
+		
+		
 
 	}
 
@@ -622,8 +659,9 @@ public class LightingAM_User {
 
 		try{		
 
-			driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.cs63.my.salesforce.com/servlet/servlet.Integration?lid=01r6C00000008jU&ic=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));
-
+			/*driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.cs63.my.salesforce.com/servlet/servlet.Integration?lid=01r6C00000008jU&ic=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));*/
+			driver.switchTo().frame(0);
+			
 			WebDriverWait wait1 = new WebDriverWait(driver, 60);
 			wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"allContentDiv\"]/div/ng-include/div[5]/div[1]/span")));
 
@@ -659,19 +697,33 @@ public class LightingAM_User {
 
 		try
 		{	
-			WebDriverWait wait1 = new WebDriverWait(driver, 60);
-			wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"174:15;a\"]")));
+			
+			WebDriverWait wait6 = new WebDriverWait(driver, 60);
+			wait6.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[5]/div[1]/section/div[1]/div[1]/div/div/div[2]/div[1]/div[2]/div/div[2]/ul/li[1]/a")));
 
-			WebElement search = driver.findElement(By.xpath("//*[@id=\"174:15;a\"]"));
+			WebElement setup = driver.findElement(By.xpath("/html/body/div[5]/div[1]/section/div[1]/div[1]/div/div/div[2]/div[1]/div[2]/div/div[2]/ul/li[1]/a"));
+			setup.isDisplayed();			
+			
+			WebDriverWait wait1 = new WebDriverWait(driver, 60);
+			wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"216:20;a\"]")));
+
+			WebElement search = driver.findElement(By.xpath("//*[@id=\"216:20;a\"]"));
 			search.sendKeys("Jacob Thibeault");	
 
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
-			WebDriverWait wait2 = new WebDriverWait(driver, 60);
+			/*WebDriverWait wait2 = new WebDriverWait(driver, 60);
 			wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jacob Thibeault\" in Salesforce']")));
 
 			WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jacob Thibeault\" in Salesforce']"));
-			suggestion.click();			
+			suggestion.click();	*/
+			
+			WebDriverWait wait2 = new WebDriverWait(driver, 60);
+			wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jacob Thibeault\"']")));
+
+			WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jacob Thibeault\"']"));
+			suggestion.click();	
+			
 
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);			
 
@@ -696,7 +748,9 @@ public class LightingAM_User {
 	{
 		try
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}															
-		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000003UZYNIA4?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));									
+		/*driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000003UZYNIA4?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));*/
+		
+		driver.switchTo().frame(driver.findElement(By.cssSelector("iframe[title='User: Jacob Thibeault ~ Salesforce - Unlimited Edition']")));
 
 		WebDriverWait wait5 = new WebDriverWait(driver, 60);
 		wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"topButtonRow\"]/input[4]")));	
@@ -722,19 +776,31 @@ public class LightingAM_User {
 
 		try
 		{	
-			WebDriverWait wait1 = new WebDriverWait(driver, 60);
-			wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"174:15;a\"]")));
+			WebDriverWait wait6 = new WebDriverWait(driver, 60);
+			wait6.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[5]/div[1]/section/div[1]/div[1]/div/div/div[2]/div[1]/div[2]/div/div[2]/ul/li[1]/a")));
 
-			WebElement search = driver.findElement(By.xpath("//*[@id=\"174:15;a\"]"));
+			WebElement setup = driver.findElement(By.xpath("/html/body/div[5]/div[1]/section/div[1]/div[1]/div/div/div[2]/div[1]/div[2]/div/div[2]/ul/li[1]/a"));
+			setup.isDisplayed();			
+			
+			WebDriverWait wait1 = new WebDriverWait(driver, 60);
+			wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"216:20;a\"]")));
+
+			WebElement search = driver.findElement(By.xpath("//*[@id=\"216:20;a\"]"));
 			search.sendKeys("Carter Andrus");	
 
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
-			WebDriverWait wait2 = new WebDriverWait(driver, 60);
+			/*WebDriverWait wait2 = new WebDriverWait(driver, 60);
 			wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Carter Andrus\" in Salesforce']")));
 
 			WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Carter Andrus\" in Salesforce']"));
-			suggestion.click();			
+			suggestion.click();	*/	
+			
+			WebDriverWait wait2 = new WebDriverWait(driver, 60);
+			wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Carter Andrus\"']")));
+
+			WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Carter Andrus\"']"));
+			suggestion.click();				
 
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);			
 
@@ -759,8 +825,10 @@ public class LightingAM_User {
 	{
 		try
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}															
-		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000001NqtNIAS?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));									
+		/*driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000001NqtNIAS?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));*/									
 
+		driver.switchTo().frame(driver.findElement(By.cssSelector("iframe[title='User: Carter Andrus ~ Salesforce - Unlimited Edition']")));
+		
 		WebDriverWait wait5 = new WebDriverWait(driver, 60);
 		wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"topButtonRow\"]/input[4]")));	
 
@@ -785,19 +853,31 @@ public class LightingAM_User {
 
 		try
 		{	
-			WebDriverWait wait1 = new WebDriverWait(driver, 60);
-			wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"174:15;a\"]")));
+			WebDriverWait wait6 = new WebDriverWait(driver, 60);
+			wait6.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[5]/div[1]/section/div[1]/div[1]/div/div/div[2]/div[1]/div[2]/div/div[2]/ul/li[1]/a")));
 
-			WebElement search = driver.findElement(By.xpath("//*[@id=\"174:15;a\"]"));
+			WebElement setup = driver.findElement(By.xpath("/html/body/div[5]/div[1]/section/div[1]/div[1]/div/div/div[2]/div[1]/div[2]/div/div[2]/ul/li[1]/a"));
+			setup.isDisplayed();			
+			
+			WebDriverWait wait1 = new WebDriverWait(driver, 60);
+			wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"216:20;a\"]")));
+
+			WebElement search = driver.findElement(By.xpath("//*[@id=\"216:20;a\"]"));
 			search.sendKeys("Jeremy Giles");	
 
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
-			WebDriverWait wait2 = new WebDriverWait(driver, 60);
+			/*WebDriverWait wait2 = new WebDriverWait(driver, 60);
 			wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jeremy Giles\" in Salesforce']")));
 
 			WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jeremy Giles\" in Salesforce']"));
-			suggestion.click();			
+			suggestion.click();	*/	
+			
+			WebDriverWait wait2 = new WebDriverWait(driver, 60);
+			wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jeremy Giles\"']")));
+
+			WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Jeremy Giles\"']"));
+			suggestion.click();	
 
 			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);			
 
@@ -822,8 +902,10 @@ public class LightingAM_User {
 	{
 		try
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}															
-		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000001NqsDIAS?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));									
+		/*driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000001NqsDIAS?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));*/									
 
+		driver.switchTo().frame(driver.findElement(By.cssSelector("iframe[title='User: Jeremy Giles ~ Salesforce - Unlimited Edition']")));
+		
 		WebDriverWait wait5 = new WebDriverWait(driver, 60);
 		wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"topButtonRow\"]/input[4]")));	
 

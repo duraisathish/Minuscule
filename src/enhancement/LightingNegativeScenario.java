@@ -44,18 +44,24 @@ public class LightingNegativeScenario {
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
 
 		WebDriverWait wait3 = new WebDriverWait(driver, 60);
-		wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"589:0;p\"]")));
+		wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"221:0;p\"]")));
 
-		WebElement search = driver.findElement(By.xpath("//*[@id=\"589:0;p\"]"));
+		WebElement search = driver.findElement(By.xpath("//*[@id=\"221:0;p\"]"));
 		search.sendKeys("Rob Antrobius");
 
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
-		WebDriverWait wait2 = new WebDriverWait(driver, 60);
+	/*	WebDriverWait wait2 = new WebDriverWait(driver, 60);
 		wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Rob Antrobius\" in Salesforce']")));
 
 		WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Rob Antrobius\" in Salesforce']"));
-		suggestion.click();			
+		suggestion.click();	*/
+		
+		WebDriverWait wait2 = new WebDriverWait(driver, 60);
+		wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Rob Antrobius\"']")));
+
+		WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"Rob Antrobius\"']"));
+		suggestion.click();	
 
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);			
 
@@ -86,11 +92,17 @@ public class LightingNegativeScenario {
 	{
 		try
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000001NqqAIAS?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));
-
+		/*driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000001NqqAIAS?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));*/
+		
+		//driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src,'https://port--cdpqa.lightning.force.com/005U0000001NqqAIAS?noredirect=1&isUserEntityOverride=1&isdtp=p1&sfdcIFrameOrigin=https://port--cdpqa.lightning.force.com&sfdcIFrameHost=web')]")));
+		
+		/*driver.switchTo().frame(driver.findElement(By.name("User: Rob Antrobius ~ Salesforce - Unlimited Edition")));*/
+		
+		driver.switchTo().frame(driver.findElement(By.cssSelector("iframe[title='User: Rob Antrobius ~ Salesforce - Unlimited Edition']")));
+				
 		WebDriverWait wait5 = new WebDriverWait(driver, 60);
 		wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"topButtonRow\"]/input[4]")));	
-
+		
 		WebElement login = driver.findElement(By.xpath("//*[@id=\"topButtonRow\"]/input[4]"));
 		login.click();       
 
@@ -104,9 +116,9 @@ public class LightingNegativeScenario {
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
 
 		WebDriverWait wait1 = new WebDriverWait(driver, 30);
-		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/div/div[2]/nav/ul/li[5]/a/span")));
+		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[5]/a/span")));
 
-		WebElement opportunity = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/div/div[2]/nav/ul/li[5]/a/span"));
+		WebElement opportunity = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[5]/a/span"));
 		opportunity.click();
 	}
 
