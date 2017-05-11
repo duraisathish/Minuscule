@@ -468,27 +468,33 @@ public class LightingAM_User {
 	{
 		try
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
-		((JavascriptExecutor)driver).executeScript("scroll(0,100)");
-		driver.switchTo().parentFrame();
-
-		WebDriverWait wait3 = new WebDriverWait(driver, 60);
-		wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='opportunityApp']/div[1]/div[5]/ul/li")));	
-
-		List<WebElement> element1 = driver.findElements(By.xpath("//*[@id='opportunityApp']/div[1]/div[5]/ul/li"));
-		for(WebElement elements : element1)
+		try
 		{
+			((JavascriptExecutor)driver).executeScript("scroll(0,100)");
+			driver.switchTo().parentFrame();
 
-			WebElement test = elements.findElement(By.tagName("a"));      	
+			WebDriverWait wait3 = new WebDriverWait(driver, 60);
+			wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='opportunityApp']/div[1]/div[5]/ul/li")));	
 
-			if(test.getText().contains("APPROVAL"))
+			List<WebElement> element1 = driver.findElements(By.xpath("//*[@id='opportunityApp']/div[1]/div[5]/ul/li"));
+			for(WebElement elements : element1)
 			{
-				test.click();       
+
+				WebElement test = elements.findElement(By.tagName("a"));      	
+
+				if(test.getText().contains("APPROVAL"))
+				{
+					test.click();       
+				}
+
 			}
+		}
+		catch(Exception element1)
+		{
 
 		}
 	}
-
-
+	
 	@Test(priority=21,enabled=true)
 	public void CommentForApproval()
 	{
