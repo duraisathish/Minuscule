@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="enhancement.LightingAM_User">
+      <class name="enhancement.Acquisition">
         <methods>
-          <include name="CommentForApproval"/>
+          <include name="CreateNewAcquisitionDealSingleBuilding"/>
         </methods>
-      </class> <!-- enhancement.LightingAM_User -->
+      </class> <!-- enhancement.Acquisition -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

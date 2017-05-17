@@ -477,7 +477,7 @@ public class LightingNegativeScenario {
 
 		String Tenant = driver.findElement(By.id("tenantNameError")).getText();
 
-		Assert.assertEquals(Tenant, " Tenant Name On Lease Required.");
+		Assert.assertEquals(Tenant, " Tenant Name On Lease Required");
 	}
 
 }

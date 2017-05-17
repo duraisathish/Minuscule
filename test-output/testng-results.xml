@@ -1,93 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="20" passed="20">
+<testng-results skipped="0" failed="0" ignored="0" total="10" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="158594" started-at="2017-05-11T16:07:08Z" finished-at="2017-05-11T16:09:46Z">
+  <suite name="Default suite" duration-ms="73964" started-at="2017-05-17T16:09:19Z" finished-at="2017-05-17T16:10:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="158594" started-at="2017-05-11T16:07:08Z" finished-at="2017-05-11T16:09:46Z">
-      <class name="enhancement.LightingNegativeScenario">
-        <test-method status="PASS" signature="Login()[pri:1, instance:enhancement.LightingNegativeScenario@437da279]" name="Login" duration-ms="13746" started-at="2017-05-11T21:37:08Z" finished-at="2017-05-11T21:37:21Z">
+    <test name="Default test" duration-ms="73964" started-at="2017-05-17T16:09:19Z" finished-at="2017-05-17T16:10:33Z">
+      <class name="enhancement.Acquisition">
+        <test-method status="PASS" signature="Login()[pri:1, instance:enhancement.Acquisition@437da279]" name="Login" duration-ms="15689" started-at="2017-05-17T21:39:20Z" finished-at="2017-05-17T21:39:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="AMUserSearch()[pri:2, instance:enhancement.LightingNegativeScenario@437da279]" name="AMUserSearch" duration-ms="17180" started-at="2017-05-11T21:37:21Z" finished-at="2017-05-11T21:37:39Z">
+        <test-method status="PASS" signature="AMUserSearch()[pri:2, instance:enhancement.Acquisition@437da279]" name="AMUserSearch" duration-ms="16937" started-at="2017-05-17T21:39:35Z" finished-at="2017-05-17T21:39:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AMUserSearch -->
-        <test-method status="PASS" signature="AMUserDetails()[pri:3, instance:enhancement.LightingNegativeScenario@437da279]" name="AMUserDetails" duration-ms="2535" started-at="2017-05-11T21:37:39Z" finished-at="2017-05-11T21:37:41Z">
+        <test-method status="PASS" signature="AMUserDetails()[pri:3, instance:enhancement.Acquisition@437da279]" name="AMUserDetails" duration-ms="2504" started-at="2017-05-17T21:39:52Z" finished-at="2017-05-17T21:39:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AMUserDetails -->
-        <test-method status="PASS" signature="AMUserLogin()[pri:4, instance:enhancement.LightingNegativeScenario@437da279]" name="AMUserLogin" duration-ms="9187" started-at="2017-05-11T21:37:41Z" finished-at="2017-05-11T21:37:50Z">
+        <test-method status="PASS" signature="AMUserLogin()[pri:4, instance:enhancement.Acquisition@437da279]" name="AMUserLogin" duration-ms="9169" started-at="2017-05-17T21:39:55Z" finished-at="2017-05-17T21:40:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AMUserLogin -->
-        <test-method status="PASS" signature="Opportunities()[pri:5, instance:enhancement.LightingNegativeScenario@437da279]" name="Opportunities" duration-ms="4942" started-at="2017-05-11T21:37:50Z" finished-at="2017-05-11T21:37:55Z">
+        <test-method status="PASS" signature="AcquisitionClick()[pri:5, instance:enhancement.Acquisition@437da279]" name="AcquisitionClick" duration-ms="4195" started-at="2017-05-17T21:40:04Z" finished-at="2017-05-17T21:40:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Opportunities -->
-        <test-method status="PASS" signature="CreateOpportunity()[pri:6, instance:enhancement.LightingNegativeScenario@437da279]" name="CreateOpportunity" duration-ms="4321" started-at="2017-05-11T21:37:55Z" finished-at="2017-05-11T21:38:00Z">
+        </test-method> <!-- AcquisitionClick -->
+        <test-method status="PASS" signature="CreateNewDeal()[pri:6, instance:enhancement.Acquisition@437da279]" name="CreateNewDeal" duration-ms="12573" started-at="2017-05-17T21:40:08Z" finished-at="2017-05-17T21:40:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreateOpportunity -->
-        <test-method status="PASS" signature="CreateNewOpportunity()[pri:7, instance:enhancement.LightingNegativeScenario@437da279]" name="CreateNewOpportunity" duration-ms="7081" started-at="2017-05-11T21:38:00Z" finished-at="2017-05-11T21:38:07Z">
+        </test-method> <!-- CreateNewDeal -->
+        <test-method status="PASS" signature="CreateNewDealclick()[pri:7, instance:enhancement.Acquisition@437da279]" name="CreateNewDealclick" duration-ms="5291" started-at="2017-05-17T21:40:21Z" finished-at="2017-05-17T21:40:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreateNewOpportunity -->
-        <test-method status="PASS" signature="Units()[pri:8, instance:enhancement.LightingNegativeScenario@437da279]" name="Units" duration-ms="4734" started-at="2017-05-11T21:38:07Z" finished-at="2017-05-11T21:38:11Z">
+        </test-method> <!-- CreateNewDealclick -->
+        <test-method status="PASS" signature="CreateNewAcquisitionDeal()[pri:8, instance:enhancement.Acquisition@437da279]" name="CreateNewAcquisitionDeal" duration-ms="2310" started-at="2017-05-17T21:40:26Z" finished-at="2017-05-17T21:40:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Units -->
-        <test-method status="PASS" signature="Analysis()[pri:9, instance:enhancement.LightingNegativeScenario@437da279]" name="Analysis" duration-ms="4398" started-at="2017-05-11T21:38:11Z" finished-at="2017-05-11T21:38:16Z">
+        </test-method> <!-- CreateNewAcquisitionDeal -->
+        <test-method status="PASS" signature="CreateNewAcquisitionDealSingleBuilding()[pri:9, instance:enhancement.Acquisition@437da279]" name="CreateNewAcquisitionDealSingleBuilding" duration-ms="2572" started-at="2017-05-17T21:40:28Z" finished-at="2017-05-17T21:40:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Analysis -->
-        <test-method status="PASS" signature="ClickAnalysis()[pri:10, instance:enhancement.LightingNegativeScenario@437da279]" name="ClickAnalysis" duration-ms="2271" started-at="2017-05-11T21:38:16Z" finished-at="2017-05-11T21:38:18Z">
+        </test-method> <!-- CreateNewAcquisitionDealSingleBuilding -->
+        <test-method status="PASS" signature="CreateNewDealName()[pri:10, instance:enhancement.Acquisition@437da279]" name="CreateNewDealName" duration-ms="2685" started-at="2017-05-17T21:40:31Z" finished-at="2017-05-17T21:40:33Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ClickAnalysis -->
-        <test-method status="PASS" signature="NewAnalysis()[pri:11, instance:enhancement.LightingNegativeScenario@437da279]" name="NewAnalysis" duration-ms="3427" started-at="2017-05-11T21:38:18Z" finished-at="2017-05-11T21:38:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NewAnalysis -->
-        <test-method status="PASS" signature="UnitsAndSetup()[pri:12, instance:enhancement.LightingNegativeScenario@437da279]" name="UnitsAndSetup" duration-ms="4012" started-at="2017-05-11T21:38:21Z" finished-at="2017-05-11T21:38:25Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- UnitsAndSetup -->
-        <test-method status="PASS" signature="Budget()[pri:13, instance:enhancement.LightingNegativeScenario@437da279]" name="Budget" duration-ms="2238" started-at="2017-05-11T21:38:25Z" finished-at="2017-05-11T21:38:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Budget -->
-        <test-method status="PASS" signature="RentsAndIncentive()[pri:14, instance:enhancement.LightingNegativeScenario@437da279]" name="RentsAndIncentive" duration-ms="4104" started-at="2017-05-11T21:38:28Z" finished-at="2017-05-11T21:38:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RentsAndIncentive -->
-        <test-method status="PASS" signature="Securities()[pri:15, instance:enhancement.LightingNegativeScenario@437da279]" name="Securities" duration-ms="2802" started-at="2017-05-11T21:38:32Z" finished-at="2017-05-11T21:38:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Securities -->
-        <test-method status="PASS" signature="SaveAnalysis()[pri:16, instance:enhancement.LightingNegativeScenario@437da279]" name="SaveAnalysis" duration-ms="2256" started-at="2017-05-11T21:38:35Z" finished-at="2017-05-11T21:38:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SaveAnalysis -->
-        <test-method status="PASS" signature="LaunchAnalysis()[pri:17, instance:enhancement.LightingNegativeScenario@437da279]" name="LaunchAnalysis" duration-ms="63974" started-at="2017-05-11T21:38:37Z" finished-at="2017-05-11T21:39:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchAnalysis -->
-        <test-method status="PASS" signature="LaunchApproval()[pri:18, instance:enhancement.LightingNegativeScenario@437da279]" name="LaunchApproval" duration-ms="2712" started-at="2017-05-11T21:39:41Z" finished-at="2017-05-11T21:39:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LaunchApproval -->
-        <test-method status="PASS" signature="Overview()[pri:19, instance:enhancement.LightingNegativeScenario@437da279]" name="Overview" duration-ms="2496" started-at="2017-05-11T21:39:44Z" finished-at="2017-05-11T21:39:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Overview -->
-        <test-method status="PASS" signature="TenantNameError()[pri:20, instance:enhancement.LightingNegativeScenario@437da279]" name="TenantNameError" duration-ms="105" started-at="2017-05-11T21:39:46Z" finished-at="2017-05-11T21:39:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TenantNameError -->
-      </class> <!-- enhancement.LightingNegativeScenario -->
+        </test-method> <!-- CreateNewDealName -->
+      </class> <!-- enhancement.Acquisition -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
