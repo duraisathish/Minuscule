@@ -5,7 +5,8 @@
     <classes>
       <class name="enhancement.Acquisition">
         <methods>
-          <include name="CreateNewAcquisitionDealSingleBuilding"/>
+          <include name="AssetAttributeclickAgain"/>
+          <include name="AssetAttributeclick"/>
         </methods>
       </class> <!-- enhancement.Acquisition -->
     </classes>
