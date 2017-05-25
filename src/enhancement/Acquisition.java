@@ -2,16 +2,14 @@ package enhancement;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Acquisition {
@@ -98,7 +96,7 @@ public class Acquisition {
 
 	}
 	
-	@Test(priority=5,enabled=false)
+	@Test(priority=5,enabled=true)
 	public void AcquisitionClick()
 	{
 		try
@@ -111,7 +109,7 @@ public class Acquisition {
 		Acquisition.click();
 	}
 	
-	@Test(priority=6,enabled=false)
+	@Test(priority=6,enabled=true)
 	public void CreateNewDeal() throws InterruptedException {			
 		
 		
@@ -137,7 +135,7 @@ public class Acquisition {
 	}
 	
 	
-	@Test(priority=7,enabled=false)
+	@Test(priority=7,enabled=true)
 	public void CreateNewDealclick() throws InterruptedException {			
 
 		
@@ -161,7 +159,7 @@ public class Acquisition {
 	}
 	
 	
-	@Test(priority=8,enabled=false)
+	@Test(priority=8,enabled=true)
 	public void CreateNewAcquisitionDeal()
 	{		
 		try
@@ -175,7 +173,7 @@ public class Acquisition {
 		
 	}
 	
-	@Test(priority=9,enabled=false)
+	@Test(priority=9,enabled=true)
 	public void CreateNewAcquisitionDealSingleBuilding()
 	{
 		
@@ -196,7 +194,7 @@ public class Acquisition {
 		
 	}
 	
-	@Test(priority=10,enabled=false)
+	@Test(priority=10,enabled=true)
 	public void CreateNewDealName()
 	{		
 		try
@@ -206,7 +204,7 @@ public class Acquisition {
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("editNewDealName")));
 
 		WebElement new_deal = driver.findElement(By.id("editNewDealName"));
-		new_deal.sendKeys("May21");	
+		new_deal.sendKeys("May264");	
 		
 		WebDriverWait wait1 = new WebDriverWait(driver, 60);
 		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div/div/div[1]/div/div[4]/button[4]")));
@@ -216,11 +214,11 @@ public class Acquisition {
 		
 	}
 	
-	@Test(priority=11,enabled=true)
+	@Test(priority=11,enabled=false)
 	public void ClickOnExistingDeal()
 	{
 		try
-		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}		
 		
 		WebDriverWait wait6 = new WebDriverWait(driver, 60);
 		wait6.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[1]/div/a")));
@@ -232,20 +230,20 @@ public class Acquisition {
 		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"221:0;p\"]")));
 
 		WebElement search = driver.findElement(By.xpath("//*[@id=\"221:0;p\"]"));
-		search.sendKeys("May17");	
+		search.sendKeys("May18");	
 		
 		WebDriverWait wait2 = new WebDriverWait(driver, 60);
-		wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"May17\"']")));
+		wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"May18\"']")));
 
-		WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"May17\"']"));
+		WebElement suggestion = driver.findElement(By.xpath("//span[contains(@class, 'mruSearchLabel slds-text-body--regular slds-text-color--default slds-truncate slds-show slds-m-right--large') and text() = '\"May18\"']"));
 		suggestion.click();	
 
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);			
 
 		WebDriverWait wait4 = new WebDriverWait(driver, 60);
-		wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='outputLookupLink slds-truncate forceOutputLookup' and contains(text(),'May17')]")));
+		wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='outputLookupLink slds-truncate forceOutputLookup' and contains(text(),'May18')]")));
 
-		WebElement dropdown = driver.findElement(By.xpath("//*[@class='outputLookupLink slds-truncate forceOutputLookup' and contains(text(),'May17')]"));
+		WebElement dropdown = driver.findElement(By.xpath("//*[@class='outputLookupLink slds-truncate forceOutputLookup' and contains(text(),'May18')]"));
 		dropdown.click();
 		
 	}
@@ -255,6 +253,8 @@ public class Acquisition {
 	{
 		try
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+		
+		driver.switchTo().defaultContent();
 		
 		WebDriverWait wait6 = new WebDriverWait(driver, 60);
 		wait6.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[1]/div/a")));
@@ -328,18 +328,42 @@ public class Acquisition {
 	}
 	
 	@Test(priority=13,enabled=true)
-	public void SwitchToFrame() {		
+	public void WaitForFrame() {
 		
+		try{
+			AssetAttribute();
+			}
+		catch(Exception e)
+		{
+			
+		}
+		
+				
+	
+	}
+	
+	@Test(priority=14,enabled=true)
+	public void SwitchToFrame()
+	{
 		List<WebElement> iframeElements = driver.findElements(By.tagName("iframe"));
 		System.out.println("The total number of iframes are " + iframeElements.size());
 		int framenumber = (iframeElements.size()-1);
 		System.out.println(framenumber);
 		driver.switchTo().frame(framenumber);
-	
 	}
 	
-	@Test(priority=14,enabled=true)
+	@Test(priority=15,enabled=true)
 	public void AssetAttributeclick() throws InterruptedException	{
+		
+		try
+		{
+			SwitchToFrame();
+		}
+		catch(Exception e)
+		{
+			
+		}
+				
 		try
 		{
 		WebDriverWait wait4 = new WebDriverWait(driver, 60);
@@ -356,10 +380,10 @@ public class Acquisition {
 		
 	}
 	
-	@Test(priority=15,enabled=true)
+	@Test(priority=16,enabled=true)
 	public void AssetAttributeclickAgain() throws InterruptedException	{
 		
-		try{			
+		try{				
 		
 		WebDriverWait wait4 = new WebDriverWait(driver, 60);
 		wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='slds-button slds-button--neutral slds-button--small slds-col--bump-left ng-isolate-scope' and contains(text(),'Edit All')]")));
@@ -372,6 +396,171 @@ public class Acquisition {
 		{
 			
 		}
+		
+	}
+	
+	@Test(priority=16,enabled=true)
+	public void AssetAttributedetails() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		
+		WebDriverWait wait1 = new WebDriverWait(driver, 60);
+		wait1.until(ExpectedConditions.elementToBeClickable(By.id("buildingNRA")));
+
+		WebElement Building_NRA = driver.findElement(By.id("buildingNRA"));
+		Building_NRA.clear();
+		Building_NRA.sendKeys("1500");		
+		
+		WebDriverWait wait2 = new WebDriverWait(driver, 60);
+		wait2.until(ExpectedConditions.elementToBeClickable(By.id("singleAssetLandArea3")));
+
+		WebElement Land_Area = driver.findElement(By.id("singleAssetLandArea3"));
+		Land_Area.clear();
+		Land_Area.sendKeys("1500");		
+		
+		WebDriverWait wait3 = new WebDriverWait(driver, 60);
+		wait3.until(ExpectedConditions.elementToBeClickable(By.id("singleAssetOccupancy")));
+
+		WebElement Occupancy = driver.findElement(By.id("singleAssetOccupancy"));
+		Occupancy.clear();
+		Occupancy.sendKeys("10");		
+		
+		WebDriverWait wait4 = new WebDriverWait(driver, 60);
+		wait4.until(ExpectedConditions.elementToBeClickable(By.id("singleAssetYearBuilt")));
+
+		WebElement Year_Built = driver.findElement(By.id("singleAssetYearBuilt"));
+		Year_Built.clear();
+		Year_Built.sendKeys("2015");
+		
+		WebDriverWait wait5 = new WebDriverWait(driver, 60);
+		wait5.until(ExpectedConditions.elementToBeClickable(By.id("waltrYears")));
+
+		WebElement Waltr = driver.findElement(By.id("waltrYears"));
+		Waltr.clear();
+		Waltr.sendKeys("5");
+		
+		WebDriverWait wait6 = new WebDriverWait(driver, 60);
+		wait6.until(ExpectedConditions.elementToBeClickable(By.id("waltrYears")));
+
+		WebElement Building_Classification = driver.findElement(By.id("singleAssetBuildingClassification"));
+		Building_Classification.sendKeys("Core");		
+		
+	}
+	
+	@Test(priority=17,enabled=true)
+	public void FinanceAttribute() throws InterruptedException
+	{
+		
+		Thread.sleep(2000);
+		
+		WebDriverWait wait1 = new WebDriverWait(driver, 60);
+		wait1.until(ExpectedConditions.elementToBeClickable(By.id("grosseditPurchasePrice")));
+		
+		WebElement Gross_Purchase_Price = driver.findElement(By.id("grosseditPurchasePrice"));
+		Gross_Purchase_Price.clear();
+		Gross_Purchase_Price.sendKeys("30000");	
+		
+		WebDriverWait wait2 = new WebDriverWait(driver, 60);
+		wait2.until(ExpectedConditions.elementToBeClickable(By.id("editClosingCosts")));
+
+		WebElement Closing_cost = driver.findElement(By.id("editClosingCosts"));
+		Closing_cost.clear();
+		Closing_cost.sendKeys("10000");			
+		
+		WebDriverWait wait3 = new WebDriverWait(driver, 60);
+		wait3.until(ExpectedConditions.elementToBeClickable(By.id("editImmediateCapital")));
+
+		WebElement Immediate_Capital = driver.findElement(By.id("editImmediateCapital"));
+		Immediate_Capital.clear();
+		Immediate_Capital.sendKeys("5000");			
+		
+		WebDriverWait wait4 = new WebDriverWait(driver, 60);
+		wait4.until(ExpectedConditions.elementToBeClickable(By.id("editActualCapRate")));
+
+		WebElement Actual_Cap_Rate = driver.findElement(By.id("editActualCapRate"));
+		Actual_Cap_Rate.clear();
+		Actual_Cap_Rate.sendKeys("5000");		
+		
+		WebDriverWait wait5 = new WebDriverWait(driver, 60);
+		wait5.until(ExpectedConditions.elementToBeClickable(By.id("editStabilizedCapRate")));
+
+		WebElement Stabilized_Cap_Rate = driver.findElement(By.id("editStabilizedCapRate"));
+		Stabilized_Cap_Rate.clear();
+		Stabilized_Cap_Rate.sendKeys("5000");	
+		
+		WebDriverWait wait6 = new WebDriverWait(driver, 60);
+		wait6.until(ExpectedConditions.elementToBeClickable(By.id("editIrr")));
+
+		WebElement IRR = driver.findElement(By.id("editIrr"));
+		IRR.clear();
+		IRR.sendKeys("100");		
+		
+		WebDriverWait wait7 = new WebDriverWait(driver, 60);
+		wait7.until(ExpectedConditions.elementToBeClickable(By.id("dealBrokerCommission")));
+
+		WebElement Broker = driver.findElement(By.id("dealBrokerCommission"));
+		Broker.clear();
+		Broker.sendKeys("5000");		
+		
+	}
+	
+	@Test(priority=18,enabled=true)
+	public void FinanceAttributeValidation() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		
+		int Grossprice = 30000;
+		
+		int Closingcost = 10000;
+		
+		int NetPurchasePriceValue = Grossprice - Closingcost; 
+		
+		System.out.println(NetPurchasePriceValue);
+		
+		int BuildingNRA = 1500;		
+		
+		WebDriverWait wait1 = new WebDriverWait(driver, 60);
+		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[49]/div/div/div[1]/div/div[2]/div/div[10]/div/div[2]/div/div/div/span[2]")));
+
+		String result1 = driver.findElement(By.xpath("/html/body/div[49]/div/div/div[1]/div/div[2]/div/div[10]/div/div[2]/div/div/div/span[2]")).getText();
+		
+		String result2=result1.replace(".00","").trim();
+		
+		String result3=result2.replace(",","").trim();
+		
+		int NetPurchasePrice = Integer.parseInt(result3);
+		System.out.println(NetPurchasePrice);		
+		
+		int GrossPricePerSqf = Grossprice/BuildingNRA;		
+		
+		System.out.println(GrossPricePerSqf);
+		
+		WebDriverWait wait2 = new WebDriverWait(driver, 60);
+		wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[49]/div/div/div[1]/div/div[2]/div/div[10]/div/div[5]/div/div/div/span[2]")));
+
+		String result = driver.findElement(By.xpath("/html/body/div[49]/div/div/div[1]/div/div[2]/div/div[10]/div/div[5]/div/div/div/span[2]")).getText();
+		
+		String replaceString=result.replace(".00 / sqf","").trim();
+				
+		int GrossPricePer = Integer.parseInt(replaceString);
+		System.out.println(GrossPricePer);		
+		
+		Assert.assertEquals(NetPurchasePriceValue, NetPurchasePrice);
+		
+		Assert.assertEquals(GrossPricePerSqf, GrossPricePer);		
+		
+	}
+	
+	@Test(priority=19,enabled=true)
+	public void SaveDeal() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		
+		WebDriverWait wait1 = new WebDriverWait(driver, 60);
+		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[49]/div/div/div[1]/div/div[3]/button[2]")));
+
+		WebElement Save = driver.findElement(By.xpath("/html/body/div[49]/div/div/div[1]/div/div[3]/button[2]"));
+		Save.click();
 	}
 	
 }

@@ -1,48 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="6" total="15" passed="9">
+<testng-results skipped="0" failed="0" ignored="1" total="20" passed="19">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="73666" started-at="2017-05-23T16:17:27Z" finished-at="2017-05-23T16:18:41Z">
+  <suite name="Default suite" duration-ms="160919" started-at="2017-05-25T15:51:19Z" finished-at="2017-05-25T15:54:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="73666" started-at="2017-05-23T16:17:27Z" finished-at="2017-05-23T16:18:41Z">
+    <test name="Default test" duration-ms="160919" started-at="2017-05-25T15:51:19Z" finished-at="2017-05-25T15:54:00Z">
       <class name="enhancement.Acquisition">
-        <test-method status="PASS" signature="Login()[pri:1, instance:enhancement.Acquisition@437da279]" name="Login" duration-ms="15874" started-at="2017-05-23T21:47:27Z" finished-at="2017-05-23T21:47:43Z">
+        <test-method status="PASS" signature="Login()[pri:1, instance:enhancement.Acquisition@23c30a20]" name="Login" duration-ms="14805" started-at="2017-05-25T21:21:19Z" finished-at="2017-05-25T21:21:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="AMUserSearch()[pri:2, instance:enhancement.Acquisition@437da279]" name="AMUserSearch" duration-ms="18150" started-at="2017-05-23T21:47:43Z" finished-at="2017-05-23T21:48:01Z">
+        <test-method status="PASS" signature="AMUserSearch()[pri:2, instance:enhancement.Acquisition@23c30a20]" name="AMUserSearch" duration-ms="18615" started-at="2017-05-25T21:21:33Z" finished-at="2017-05-25T21:21:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AMUserSearch -->
-        <test-method status="PASS" signature="AMUserDetails()[pri:3, instance:enhancement.Acquisition@437da279]" name="AMUserDetails" duration-ms="2783" started-at="2017-05-23T21:48:01Z" finished-at="2017-05-23T21:48:04Z">
+        <test-method status="PASS" signature="AMUserDetails()[pri:3, instance:enhancement.Acquisition@23c30a20]" name="AMUserDetails" duration-ms="2609" started-at="2017-05-25T21:21:52Z" finished-at="2017-05-25T21:21:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AMUserDetails -->
-        <test-method status="PASS" signature="AMUserLogin()[pri:4, instance:enhancement.Acquisition@437da279]" name="AMUserLogin" duration-ms="10171" started-at="2017-05-23T21:48:04Z" finished-at="2017-05-23T21:48:14Z">
+        <test-method status="PASS" signature="AMUserLogin()[pri:4, instance:enhancement.Acquisition@23c30a20]" name="AMUserLogin" duration-ms="9649" started-at="2017-05-25T21:21:55Z" finished-at="2017-05-25T21:22:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AMUserLogin -->
-        <test-method status="PASS" signature="ClickOnExistingDeal()[pri:11, instance:enhancement.Acquisition@437da279]" name="ClickOnExistingDeal" duration-ms="11384" started-at="2017-05-23T21:48:14Z" finished-at="2017-05-23T21:48:25Z">
+        <test-method status="PASS" signature="AcquisitionClick()[pri:5, instance:enhancement.Acquisition@23c30a20]" name="AcquisitionClick" duration-ms="4404" started-at="2017-05-25T21:22:04Z" finished-at="2017-05-25T21:22:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ClickOnExistingDeal -->
-        <test-method status="PASS" signature="AssetAttribute()[pri:12, instance:enhancement.Acquisition@437da279]" name="AssetAttribute" duration-ms="14638" started-at="2017-05-23T21:48:25Z" finished-at="2017-05-23T21:48:40Z">
+        </test-method> <!-- AcquisitionClick -->
+        <test-method status="PASS" signature="CreateNewDeal()[pri:6, instance:enhancement.Acquisition@23c30a20]" name="CreateNewDeal" duration-ms="13316" started-at="2017-05-25T21:22:09Z" finished-at="2017-05-25T21:22:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNewDeal -->
+        <test-method status="PASS" signature="CreateNewDealclick()[pri:7, instance:enhancement.Acquisition@23c30a20]" name="CreateNewDealclick" duration-ms="5800" started-at="2017-05-25T21:22:22Z" finished-at="2017-05-25T21:22:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNewDealclick -->
+        <test-method status="PASS" signature="CreateNewAcquisitionDeal()[pri:8, instance:enhancement.Acquisition@23c30a20]" name="CreateNewAcquisitionDeal" duration-ms="2414" started-at="2017-05-25T21:22:28Z" finished-at="2017-05-25T21:22:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNewAcquisitionDeal -->
+        <test-method status="PASS" signature="CreateNewAcquisitionDealSingleBuilding()[pri:9, instance:enhancement.Acquisition@23c30a20]" name="CreateNewAcquisitionDealSingleBuilding" duration-ms="2885" started-at="2017-05-25T21:22:30Z" finished-at="2017-05-25T21:22:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNewAcquisitionDealSingleBuilding -->
+        <test-method status="PASS" signature="CreateNewDealName()[pri:10, instance:enhancement.Acquisition@23c30a20]" name="CreateNewDealName" duration-ms="2884" started-at="2017-05-25T21:22:33Z" finished-at="2017-05-25T21:22:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateNewDealName -->
+        <test-method status="PASS" signature="AssetAttribute()[pri:12, instance:enhancement.Acquisition@23c30a20]" name="AssetAttribute" duration-ms="5267" started-at="2017-05-25T21:22:36Z" finished-at="2017-05-25T21:22:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AssetAttribute -->
-        <test-method status="PASS" signature="SwitchToFrame()[pri:13, instance:enhancement.Acquisition@437da279]" name="SwitchToFrame" duration-ms="55" started-at="2017-05-23T21:48:40Z" finished-at="2017-05-23T21:48:40Z">
+        <test-method status="PASS" signature="WaitForFrame()[pri:13, instance:enhancement.Acquisition@23c30a20]" name="WaitForFrame" duration-ms="5291" started-at="2017-05-25T21:22:41Z" finished-at="2017-05-25T21:22:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WaitForFrame -->
+        <test-method status="PASS" signature="SwitchToFrame()[pri:14, instance:enhancement.Acquisition@23c30a20]" name="SwitchToFrame" duration-ms="84" started-at="2017-05-25T21:22:47Z" finished-at="2017-05-25T21:22:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SwitchToFrame -->
-        <test-method status="PASS" signature="AssetAttributeclick()[pri:14, instance:enhancement.Acquisition@437da279]" name="AssetAttributeclick" duration-ms="270" started-at="2017-05-23T21:48:40Z" finished-at="2017-05-23T21:48:40Z">
+        <test-method status="PASS" signature="AssetAttributeclick()[pri:15, instance:enhancement.Acquisition@23c30a20]" name="AssetAttributeclick" duration-ms="60067" started-at="2017-05-25T21:22:47Z" finished-at="2017-05-25T21:23:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AssetAttributeclick -->
-        <test-method status="PASS" signature="AssetAttributeclickAgain()[pri:15, instance:enhancement.Acquisition@437da279]" name="AssetAttributeclickAgain" duration-ms="295" started-at="2017-05-23T21:48:40Z" finished-at="2017-05-23T21:48:41Z">
+        <test-method status="PASS" signature="AssetAttributeclickAgain()[pri:16, instance:enhancement.Acquisition@23c30a20]" name="AssetAttributeclickAgain" duration-ms="84" started-at="2017-05-25T21:23:47Z" finished-at="2017-05-25T21:23:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AssetAttributeclickAgain -->
+        <test-method status="PASS" signature="AssetAttributedetails()[pri:16, instance:enhancement.Acquisition@23c30a20]" name="AssetAttributedetails" duration-ms="3929" started-at="2017-05-25T21:23:47Z" finished-at="2017-05-25T21:23:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssetAttributedetails -->
+        <test-method status="PASS" signature="FinanceAttribute()[pri:17, instance:enhancement.Acquisition@23c30a20]" name="FinanceAttribute" duration-ms="4158" started-at="2017-05-25T21:23:51Z" finished-at="2017-05-25T21:23:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FinanceAttribute -->
+        <test-method status="PASS" signature="FinanceAttributeValidation()[pri:18, instance:enhancement.Acquisition@23c30a20]" name="FinanceAttributeValidation" duration-ms="2268" started-at="2017-05-25T21:23:55Z" finished-at="2017-05-25T21:23:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FinanceAttributeValidation -->
+        <test-method status="PASS" signature="SaveDeal()[pri:19, instance:enhancement.Acquisition@23c30a20]" name="SaveDeal" duration-ms="2323" started-at="2017-05-25T21:23:57Z" finished-at="2017-05-25T21:24:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveDeal -->
       </class> <!-- enhancement.Acquisition -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

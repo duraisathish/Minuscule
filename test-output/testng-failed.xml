@@ -5,7 +5,7 @@
     <classes>
       <class name="enhancement.Acquisition">
         <methods>
-          <include name="AssetAttributeclickAgain"/>
+          <include name="WaitForFrame"/>
           <include name="AssetAttributeclick"/>
         </methods>
       </class> <!-- enhancement.Acquisition -->
