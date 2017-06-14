@@ -1,5 +1,10 @@
 package enhancement;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
@@ -12,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Acquisition {
+public class DevEnvironment {
 	
 	public WebDriver driver = new ChromeDriver(); 
 
@@ -20,13 +25,13 @@ public class Acquisition {
 	public void Login() 
 	{
 
-		driver.get("https://test.salesforce.com/");
+		driver.get("https://port--mindev14.cs26.my.salesforce.com/");
 
 		driver.manage().window().maximize();
 
-		driver.findElement(By.id("username")).sendKeys("satya@minusculetechnologies.com.cdpqa");
+		driver.findElement(By.id("username")).sendKeys("sathish@minusculetechnologies.com.mindev14");
 
-		driver.findElement(By.id("password")).sendKeys("reddyreddy1");
+		driver.findElement(By.id("password")).sendKeys("durai@123");
 
 		driver.findElement(By.id("Login")).click();	
 
@@ -98,19 +103,21 @@ public class Acquisition {
 		driver.navigate().refresh();			
 		}
 
-
 	}
 	
 	@Test(priority=5,enabled=true)
 	public void AcquisitionClick()
 	{
+		
 		try
-		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}		
+		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+		
+		driver.switchTo().defaultContent();	
 		
 		WebDriverWait wait1 = new WebDriverWait(driver, 60);
-		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[2]/a/span")));
-		
-		WebElement Acquisition = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[2]/a/span"));
+		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[4]/a/span")));
+																	 	
+		WebElement Acquisition = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[4]/a/span"));
 		Acquisition.click();
 	}
 	
@@ -209,13 +216,55 @@ public class Acquisition {
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("editNewDealName")));
 
 		WebElement new_deal = driver.findElement(By.id("editNewDealName"));
-		new_deal.sendKeys("June15");	
+		new_deal.sendKeys("NewTest347");
 		
 		WebDriverWait wait1 = new WebDriverWait(driver, 60);
 		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div/div/div[1]/div/div[4]/button[4]")));
 
 		WebElement Next = driver.findElement(By.xpath("/html/body/div[3]/div/div/div[1]/div/div[4]/button[4]"));
 		Next.click();
+		
+	}
+	
+	@Test(priority=11,enabled=true)
+	public void ContinueCreatingNewDealAgain() throws InterruptedException, IOException
+	{
+		
+		String TestFile = "C:\\Users\\Dell\\workspace\\temp.txt";
+		File FC = new File(TestFile);
+		FileReader FR = new FileReader(TestFile);
+		BufferedReader BR = new BufferedReader(FR);			
+		
+		for (String Content = BR.readLine(); Content != null; Content = BR.readLine()) {			
+		AssetAttribute();
+		AcquisitionClick();
+		CreateNewDeal();
+		CreateNewDealclick();
+		CreateNewAcquisitionDeal();
+		CreateNewAcquisitionDealSingleBuilding();	
+		  
+		//Loop to read all lines one by one from file and print It.
+		
+		System.out.println(Content);
+		try
+		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
+			
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("editNewDealName")));
+
+		WebElement new_deal = driver.findElement(By.id("editNewDealName"));
+		new_deal.clear();
+		new_deal.sendKeys(Content);
+
+		WebDriverWait wait1 = new WebDriverWait(driver, 60);
+		wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div/div/div[1]/div/div[4]/button[4]")));
+
+		WebElement Next = driver.findElement(By.xpath("/html/body/div[3]/div/div/div[1]/div/div[4]/button[4]"));
+		Next.click();
+		
+		}
+		
+	
 		
 	}
 	
@@ -253,7 +302,7 @@ public class Acquisition {
 		
 	}
 	
-	@Test(priority=12,enabled=true)
+	@Test(priority=12,enabled=false)
 	public void AssetAttribute()
 	{
 		try
@@ -268,40 +317,29 @@ public class Acquisition {
 		logout.isDisplayed();		
 		
 		WebDriverWait wait2 = new WebDriverWait(driver, 60);
-		wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[2]/a/span")));
+		wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[4]/a/span")));
 		
-		WebElement Acquisition = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[2]/a/span"));
+		WebElement Acquisition = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[4]/a/span"));
 		Acquisition.isDisplayed();		
 		
 		WebDriverWait wait3 = new WebDriverWait(driver, 60);
-		wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[3]/a/span")));
+		wait3.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[5]/a/span")));
 		
-		WebElement Dispositions_Pipeline = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[3]/a/span"));
+		WebElement Dispositions_Pipeline = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[5]/a/span"));
 		Dispositions_Pipeline.isDisplayed();
 		
 		WebDriverWait wait4 = new WebDriverWait(driver, 60);
-		wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[4]/a/span")));
+		wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[6]/a/span")));
 		
-		WebElement Development_Pipeline = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[4]/a/span"));
+		WebElement Development_Pipeline = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[6]/a/span"));
 		Development_Pipeline.isDisplayed();
 		
 		WebDriverWait wait5 = new WebDriverWait(driver, 60);
-		wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[5]/a/span")));
+		wait5.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[7]/a/span")));
 		
-		WebElement Value_Pipeline = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[5]/a/span"));
-		Value_Pipeline.isDisplayed();
-		
-		WebDriverWait wait7 = new WebDriverWait(driver, 60);
-		wait7.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[6]/a/span")));
-		
-		WebElement Reports = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[6]/a/span"));
-		Reports.isDisplayed();
-		
-		WebDriverWait wait8 = new WebDriverWait(driver, 60);
-		wait8.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[7]/a/span")));
-		
-		WebElement Land = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[7]/a/span"));
-		Land.isDisplayed(); 		
+		WebElement Value_Pipeline = driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[7]/a/span"));
+		Value_Pipeline.isDisplayed();				
+				
 		
 		WebDriverWait wait9 = new WebDriverWait(driver, 60);
 		wait9.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"oneHeader\"]/div[3]/one-appnav/div/div[2]/one-app-nav-bar/one-app-nav-bar-item-root[8]/a/span")));
@@ -318,21 +356,21 @@ public class Acquisition {
 		try
 		{Thread.sleep(2000);} catch(Exception e){System.out.println("Thread Error");}
 
-		WebDriverWait wait10 = new WebDriverWait(driver, 60);
+		/*WebDriverWait wait10 = new WebDriverWait(driver, 60);
 		wait10.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(@class, 'label slds-truncate slds-text-link') and text() = 'Approvals']")));
 
 		WebElement approval = driver.findElement(By.xpath("//span[contains(@class, 'label slds-truncate slds-text-link') and text() = 'Approvals']"));
-		approval.isDisplayed();
+		approval.isDisplayed();*/
 		
 		WebDriverWait wait11 = new WebDriverWait(driver, 60);
 		wait11.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[5]/div[2]/div[3]/div[2]/div/div[1]/button")));
 
 		WebElement close = driver.findElement(By.xpath("/html/body/div[5]/div[2]/div[3]/div[2]/div/div[1]/button"));
-		close.click();
+		close.click();  								
 		
 	}
 	
-	@Test(priority=13,enabled=true)
+	@Test(priority=13,enabled=false)
 	public void WaitForFrame() {
 		
 		try{
@@ -347,7 +385,7 @@ public class Acquisition {
 	
 	}
 	
-	@Test(priority=14,enabled=true)
+	@Test(priority=14,enabled=false)
 	public void SwitchToFrame()
 	{
 		List<WebElement> iframeElements = driver.findElements(By.tagName("iframe"));
@@ -357,7 +395,7 @@ public class Acquisition {
 		driver.switchTo().frame(framenumber);
 	}
 	
-	@Test(priority=15,enabled=true)
+	@Test(priority=15,enabled=false)
 	public void AssetAttributeclick() throws InterruptedException	{
 		
 		try
@@ -385,7 +423,7 @@ public class Acquisition {
 		
 	}
 	
-	@Test(priority=16,enabled=true)
+	@Test(priority=16,enabled=false)
 	public void AssetAttributeclickAgain() throws InterruptedException	{
 		
 		try{				
@@ -404,7 +442,7 @@ public class Acquisition {
 		
 	}
 	
-	@Test(priority=16,enabled=true)
+	@Test(priority=16,enabled=false)
 	public void AssetAttributedetails() throws InterruptedException
 	{
 		Thread.sleep(2000);
@@ -452,7 +490,7 @@ public class Acquisition {
 		
 	}
 	
-	@Test(priority=17,enabled=true)
+	@Test(priority=17,enabled=false)
 	public void FinanceAttribute() throws InterruptedException
 	{
 		
@@ -509,7 +547,7 @@ public class Acquisition {
 		
 	}
 	
-	@Test(priority=18,enabled=true)
+	@Test(priority=18,enabled=false)
 	public void FinanceAttributeValidation() throws InterruptedException
 	{
 		Thread.sleep(2000);
@@ -556,7 +594,7 @@ public class Acquisition {
 		
 	}
 	
-	@Test(priority=19,enabled=true)
+	@Test(priority=19,enabled=false)
 	public void SaveDeal() throws InterruptedException
 	{
 		Thread.sleep(2000);

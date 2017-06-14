@@ -5,8 +5,8 @@
     <classes>
       <class name="enhancement.Acquisition">
         <methods>
-          <include name="WaitForFrame"/>
-          <include name="AssetAttributeclick"/>
+          <include name="AMUserLogin"/>
+          <include name="ContinueCreatingNewDealAgain"/>
         </methods>
       </class> <!-- enhancement.Acquisition -->
     </classes>
